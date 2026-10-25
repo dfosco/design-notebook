@@ -1,0 +1,154 @@
+{
+  "formatVersion": 1,
+  "phase": "consumer-qualification",
+  "status": "failed",
+  "environment": {
+    "node": "v20.19.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "nodeExecutable": "/Users/danielfosco/.npm/_npx/39eeea3b362d2c2d/node_modules/node/bin/node",
+    "nodeFromPath": "/Users/danielfosco/.npm/_npx/39eeea3b362d2c2d/node_modules/node/bin/node",
+    "npm": "10.8.2"
+  },
+  "startedAt": "2026-10-23T15:47:33.116Z",
+  "checks": [
+    {
+      "name": "pack-list-and-attribution",
+      "status": "passed",
+      "entryCount": 57,
+      "requiredFiles": [
+        "LICENSES/tiny-canvas-MIT.txt",
+        "README.md",
+        "bin/design-notebook.js",
+        "docs/getting-started.md",
+        "docs/authoring.md",
+        "docs/release/0.10.0-first-look.md",
+        "docs/research/canvas-renderer-provenance.md",
+        "src/client/shell/index.js",
+        "src/client/shell/style.css",
+        "src/client/docs/index.js",
+        "src/client/docs/style.css",
+        "src/client/sites/index.js",
+        "src/client/sites/style.css",
+        "src/vendor/tiny-canvas/style.css",
+        "src/core/runtime/index.js",
+        "src/core/publisher/index.js",
+        "examples/first-look/notebook/research/borrow-flow.prototype/borrow-flow.prototype.json",
+        "examples/first-look/notebook/research/checkout-review.canvas/checkout-review.canvas.jsonl",
+        "examples/first-look/notebook/research/checkout-rationale.doc.mdx",
+        "examples/first-look/notebook/research/catalog.site/catalog.site.json",
+        "skills/design-notebook-authoring/SKILL.md"
+      ],
+      "packageArchive": {
+        "filename": "design-notebook-0.10.0-first-look.tgz",
+        "shasum": "02afd3803734a66631bcb3061bb8bb509972f727",
+        "integrity": "sha512-bFw3Ir/pqmeHG5t3D7ifKAgksZ7dY28IQfOItEp6i/psvjH4SiEhmuw1cl5vBsXq34WGEXnasrm6+7GHWiVwVA==",
+        "sha256": "3fc1c8fee2ef06876fa682327e8d8d8e35cad8dd0bab7cbcf7de236444647b28",
+        "entryCount": 57
+      }
+    },
+    {
+      "name": "clean-install-and-public-entry",
+      "status": "passed",
+      "installedVersion": "0.10.0-first-look",
+      "installedBin": "node_modules/.bin/design-notebook",
+      "exportNames": [
+        "ARTIFACT_DIRECTORY_SUFFIXES",
+        "NOTEBOOK_INFRASTRUCTURE_DIRECTORIES",
+        "NOTEBOOK_RUNTIME_REFRESH_EVENT",
+        "buildNotebook",
+        "createNotebookRuntime",
+        "createPrototypeRouteBinding",
+        "discoverNotebook",
+        "prototypeRouteBasePath",
+        "publishNotebook",
+        "resolveNotebookPath"
+      ]
+    },
+    {
+      "name": "included-example-and-mixed-scale-fixture",
+      "status": "passed",
+      "artifactCount": 64,
+      "kinds": [
+        "canvas",
+        "doc",
+        "prototype",
+        "site"
+      ],
+      "nestedGroup": "research/scale/group-*/flows|notes"
+    },
+    {
+      "name": "direct-add-edit-rename-discovery",
+      "status": "passed",
+      "stableId": "release-added",
+      "finalPath": "research/scale/group-08/flows/release-renamed.doc.mdx"
+    },
+    {
+      "name": "invalid-file-diagnostic-and-recovery",
+      "status": "passed",
+      "artifactId": "existing-catalog",
+      "unavailableObserved": true,
+      "recoveryObserved": true
+    },
+    {
+      "name": "parent-folder-move-preserves-identity-and-grouping",
+      "status": "passed",
+      "artifactCount": 64,
+      "siteFolderPath": "workspace/review-cycle/catalog.site",
+      "documentPath": "workspace/review-cycle/checkout-rationale.doc.mdx"
+    },
+    {
+      "name": "direct-source-edit-through-installed-runtime",
+      "status": "passed",
+      "marker": "source-edit-1792770459243",
+      "response": {
+        "url": "http://127.0.0.1:5173/workspace/review-cycle/borrow-flow.prototype/src/main.jsx",
+        "status": 200,
+        "contentType": "text/javascript",
+        "markerValue": "source-edit-1792770459243",
+        "markerValueFound": true,
+        "bodyLength": 8967,
+        "bodyExcerpt": "s/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-n1Tn9O/consumer/notebook/workspace/review-cycle/borrow-flow.prototype/src/main.jsx\",\n    lineNumber: 34,\n    columnNumber: 3\n  }, this)\n);\nwindow.releaseConsumerMarker = \"source-edit-1792770459243\";\nvar _c;\n$RefreshReg$(_c, \"PrototypeApp\");\nimport * as RefreshRuntime from \"/@react-refresh\";\nconst inWebWorker = typeof WorkerGlobalScope !== \"undefined\" && self instanceof WorkerGlobalScope;\nif (import.meta.hot && !inWebWorker) {\n  if ("
+      }
+    }
+  ],
+  "failures": [
+    {
+      "message": "Installed notebook dev server did not stop after SIGINT/SIGTERM.",
+      "stack": "Error: Installed notebook dev server did not stop after SIGINT/SIGTERM.\n    at stopChild (file:///Users/danielfosco/workspace/design-notebook/tests/release/consumer-qualification.mjs:295:26)\n    at async runQualification (file:///Users/danielfosco/workspace/design-notebook/tests/release/consumer-qualification.mjs:486:19)\n    at async file:///Users/danielfosco/workspace/design-notebook/tests/release/consumer-qualification.mjs:571:3"
+    }
+  ],
+  "cleanup": {
+    "devServerStopped": false,
+    "staticServersStopped": true,
+    "tempTreeRemoved": true,
+    "errors": []
+  },
+  "sourceExampleSha256": "c9bc035755075f781b50f32dfa311f8b4ef0b89ca94dfb72f80a0366ccb380fc",
+  "package": {
+    "name": "design-notebook",
+    "version": "0.10.0-first-look",
+    "license": "UNLICENSED",
+    "engines": {
+      "node": "^20.19.0 || >=22.12.0"
+    }
+  },
+  "candidateHashes": {
+    "package.json": "13f04b4f98b5b48c1dd46a740e703593ff3f790bc70b4fc32f2ec75501c0184d",
+    "package-lock.json": "92a0e0b30a63ceeec62354abae7c50f55b2263dd4e74d1dcf737f45ab597272c",
+    "index.js": "14257a9bf8a087106b6527f5d59b94845dcc0fd6e6c0df32c783a9a09411c212",
+    "index.d.ts": "213fdb0f506abd4a71462962576d00fca120dc18633cb50beea00ff53efe3199",
+    "bin/design-notebook.js": "d7af28b1a6b804e6d912ba0e0f549c2dd6848532a95f374884d997f5ac98494e"
+  },
+  "packageArchive": {
+    "filename": "design-notebook-0.10.0-first-look.tgz",
+    "shasum": "02afd3803734a66631bcb3061bb8bb509972f727",
+    "integrity": "sha512-bFw3Ir/pqmeHG5t3D7ifKAgksZ7dY28IQfOItEp6i/psvjH4SiEhmuw1cl5vBsXq34WGEXnasrm6+7GHWiVwVA==",
+    "sha256": "3fc1c8fee2ef06876fa682327e8d8d8e35cad8dd0bab7cbcf7de236444647b28",
+    "entryCount": 57
+  },
+  "localOrigin": "http://127.0.0.1:5173/",
+  "sourceExampleAfterSha256": "c9bc035755075f781b50f32dfa311f8b4ef0b89ca94dfb72f80a0366ccb380fc",
+  "sourceExampleUnchanged": true,
+  "finishedAt": "2026-10-23T15:47:52.864Z"
+}

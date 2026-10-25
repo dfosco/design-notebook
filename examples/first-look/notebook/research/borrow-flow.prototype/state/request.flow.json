@@ -1,0 +1,11 @@
+{
+  "request": {
+    "section": "Available to borrow",
+    "title": "The Shape of Small Things",
+    "summary": "A field guide to noticing the details that make everyday places feel welcoming.",
+    "availability": "Ready for pickup this week",
+    "action": "Request this book",
+    "confirmation": "Request received",
+    "finePrint": "This is a prototype. Your request is not sent to a real library."
+  }
+}

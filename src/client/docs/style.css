@@ -1,0 +1,64 @@
+.doc-renderer {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
+}
+
+.doc-renderer > * {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.doc-renderer pre {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.doc-renderer img,
+.doc-renderer video,
+.doc-renderer svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.doc-renderer table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.doc-widget {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.doc-widget__canvas {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.doc-widget__unavailable {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #f59e0b;
+  border-radius: 0.5rem;
+  background: #fffbeb;
+  color: #78350f;
+  overflow-wrap: anywhere;
+}

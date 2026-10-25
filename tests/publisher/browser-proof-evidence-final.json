@@ -1,0 +1,458 @@
+{
+  "formatVersion": 1,
+  "status": "failed",
+  "startedAt": "2026-10-23T15:12:55.968Z",
+  "evidencePath": "/Users/danielfosco/workspace/design-notebook/tests/publisher/browser-proof-evidence-final.json",
+  "candidateHashes": {
+    "src/core/publisher/index.js": "20f1934ac45b70f3d02c7731b7a2e43430a133fbb39b7fa55f0ea6f63fa13397",
+    "src/core/publisher/browser.js": "bf97fcec7c59c6e59c8767866238ade22e979c35de99940c4d865d376bdef94e",
+    "tests/publisher/publisher.test.js": "b1d466efbc4c3b0d2c33aa3ed5abe763744dd27d573d2d4368c74f27b34107e5",
+    "tests/publisher/browser-proof.mjs": "6119fffba93c89715b4164441145cb4eabc2ff71415cfcf624e4122316bd3424",
+    "docs/format/publishing.md": "4f07e2ed233a6588047053536b9f6fe5de82897645db87337332635b8a722869"
+  },
+  "outputHashes": [
+    {
+      "base": "/",
+      "outputTreeSha256": "3012da7d869622be95cb6fc061be8ea9244ccfe3da04fe942e5ca541579a5c57"
+    },
+    {
+      "base": "/preview/branch/",
+      "outputTreeSha256": "050e50e5bafec7ea6d9b2c9730ef495a4108d1747231d16a817136266f929d84"
+    }
+  ],
+  "builds": [
+    {
+      "base": "/",
+      "outputTreeSha256": "3012da7d869622be95cb6fc061be8ea9244ccfe3da04fe942e5ca541579a5c57",
+      "log": "vite v7.3.5 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-n8pZHC/output-root/prototypes/borrow-flow/research/borrow-flow.prototype/src/index.html    0.44 kB │ gzip:  0.28 kB\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-n8pZHC/output-root/prototypes/borrow-flow/assets/index-Ba12So0z.css                        1.49 kB │ gzip:  0.71 kB\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-n8pZHC/output-root/prototypes/borrow-flow/assets/index-q2MElKgW.js                       213.26 kB │ gzip: 67.61 kB\n✓ built in 511ms\nvite v7.3.5 building client environment for production...\ntransforming...\n✓ 41 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/_design-notebook_static-entry-tlr7xeM4.css    8.42 kB │ gzip:  2.09 kB\ndist/assets/notebook-6hB5I36O.js                        247.73 kB │ gzip: 75.24 kB\n✓ built in 329ms\nStatic notebook output: /var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-n8pZHC/output-root\nborrow-flow: /prototypes/borrow-flow/\n"
+    },
+    {
+      "base": "/preview/branch/",
+      "outputTreeSha256": "050e50e5bafec7ea6d9b2c9730ef495a4108d1747231d16a817136266f929d84",
+      "log": "vite v7.3.5 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-n8pZHC/output-prefix/prototypes/borrow-flow/research/borrow-flow.prototype/src/index.html    0.47 kB │ gzip:  0.29 kB\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-n8pZHC/output-prefix/prototypes/borrow-flow/assets/index-Ba12So0z.css                        1.49 kB │ gzip:  0.71 kB\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-n8pZHC/output-prefix/prototypes/borrow-flow/assets/index-D5KUA580.js                       213.27 kB │ gzip: 67.62 kB\n✓ built in 425ms\nvite v7.3.5 building client environment for production...\ntransforming...\n✓ 41 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/_design-notebook_static-entry-tlr7xeM4.css    8.42 kB │ gzip:  2.09 kB\ndist/assets/notebook-CvU-gfTQ.js                        247.75 kB │ gzip: 75.25 kB\n✓ built in 315ms\nStatic notebook output: /var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-n8pZHC/output-prefix\nborrow-flow: /preview/branch/prototypes/borrow-flow/\n"
+    }
+  ],
+  "outputs": [
+    {
+      "base": "/",
+      "outputTreeSha256": "3012da7d869622be95cb6fc061be8ea9244ccfe3da04fe942e5ca541579a5c57",
+      "requests": 41,
+      "prototypeViews": [
+        "request",
+        "confirmation"
+      ],
+      "graphDiagnostics": [
+        {
+          "code": "CANVAS_EVENT_HISTORY_EXCLUDED",
+          "message": "research/checkout-review.canvas: Only final rendered widget state is published; source event history is excluded."
+        },
+        {
+          "code": "SITE_LOCAL_REFERENCE_EXCLUDED",
+          "message": "research/catalog.site: Local Site source paths and development URLs are never included in static output."
+        }
+      ],
+      "canvasDiagnostics": [],
+      "chartFallbackText": "Widget type “chart” is not supported by this canvas viewer; showing its text fallback. Text fallback: The circulation chart is not included in this first-look viewer. Compare the source report when available.",
+      "markdownImage": {
+        "src": "http://127.0.0.1:61948/notebook-assets/research/assets/publisher-proof.svg",
+        "path": "/notebook-assets/research/assets/publisher-proof.svg",
+        "naturalWidth": 64,
+        "naturalHeight": 32,
+        "complete": true,
+        "alt": "Publisher Markdown diagram"
+      },
+      "componentImage": {
+        "src": "http://127.0.0.1:61948/notebook-assets/research/assets/publisher-proof.svg",
+        "path": "/notebook-assets/research/assets/publisher-proof.svg",
+        "naturalWidth": 64,
+        "naturalHeight": 32,
+        "complete": true,
+        "alt": "Publisher component diagram"
+      },
+      "canvasImage": {
+        "src": "http://127.0.0.1:61948/notebook-assets/research/checkout-review.canvas/assets/canvas-proof.svg",
+        "path": "/notebook-assets/research/checkout-review.canvas/assets/canvas-proof.svg",
+        "naturalWidth": 64,
+        "naturalHeight": 32,
+        "complete": true,
+        "alt": "Publisher canvas image"
+      },
+      "canvasSiteScreenshot": {
+        "src": "http://127.0.0.1:61948/notebook-assets/research/catalog.site/assets/catalog-home.svg",
+        "path": "/notebook-assets/research/catalog.site/assets/catalog-home.svg",
+        "naturalWidth": 960,
+        "naturalHeight": 600,
+        "complete": true,
+        "alt": "Catalog home"
+      },
+      "standaloneSiteScreenshot": {
+        "src": "http://127.0.0.1:61948/notebook-assets/research/catalog.site/assets/catalog-home.svg",
+        "path": "/notebook-assets/research/catalog.site/assets/catalog-home.svg",
+        "naturalWidth": 960,
+        "naturalHeight": 600,
+        "complete": true,
+        "alt": "Catalog home"
+      },
+      "staticSiteIframes": 0,
+      "siteLink": "https://example.com/books",
+      "httpFailures": [],
+      "requestFailures": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "shellSnapshot": {
+        "url": "http://127.0.0.1:61948/?artifact=existing-catalog",
+        "title": "Design Notebook",
+        "selectedHeading": "Existing book catalog",
+        "selectedView": "catalog-home",
+        "prototypeFrameUrl": null,
+        "graphDiagnostics": [
+          {
+            "code": "CANVAS_EVENT_HISTORY_EXCLUDED",
+            "message": ""
+          },
+          {
+            "code": "SITE_LOCAL_REFERENCE_EXCLUDED",
+            "message": ""
+          }
+        ],
+        "artifactIds": [
+          "borrow-flow",
+          "existing-catalog",
+          "checkout-rationale",
+          "checkout-review"
+        ],
+        "status": [],
+        "bodyText": "Design Notebook\nresearch\nassets\nBorrow a book\nprototype\nExisting book catalog\nsite\nBorrow flow review notes\ndoc\ncheckout-review\ncanvas\n\nSITE\n\nExisting book catalog\nexisting-catalog\nView\nCatalog home\n2 notebook diagnostics\nOpen Catalog home"
+      }
+    }
+  ],
+  "phases": [
+    {
+      "phase": "candidate-hashes",
+      "status": "started"
+    },
+    {
+      "phase": "validate-authored-fixture",
+      "status": "started"
+    },
+    {
+      "phase": "validate-authored-fixture",
+      "status": "passed"
+    },
+    {
+      "phase": "add-proof-resources-to-temporary-starter-copy",
+      "status": "started"
+    },
+    {
+      "phase": "cli-build-root",
+      "status": "started"
+    },
+    {
+      "phase": "cli-build-root",
+      "status": "passed",
+      "base": "/",
+      "outputTreeSha256": "3012da7d869622be95cb6fc061be8ea9244ccfe3da04fe942e5ca541579a5c57"
+    },
+    {
+      "phase": "cli-build-prefix",
+      "status": "started"
+    },
+    {
+      "phase": "cli-build-prefix",
+      "status": "passed",
+      "base": "/preview/branch/",
+      "outputTreeSha256": "050e50e5bafec7ea6d9b2c9730ef495a4108d1747231d16a817136266f929d84"
+    },
+    {
+      "phase": "load-browser-driver",
+      "status": "started"
+    },
+    {
+      "phase": "load-browser-driver",
+      "status": "passed"
+    },
+    {
+      "phase": "standalone-site-/preview/branch/",
+      "status": "failed",
+      "message": "Browser logged a console error.\n+ actual - expected\n\n+ [\n+   {\n+     base: '/preview/branch/',\n+     location: {\n+       column: 0,\n+       columnNumber: 0,\n+       line: 0,\n+       lineNumber: 0,\n+       url: 'http://127.0.0.1:61976/favicon.ico'\n+     },\n+     text: 'Failed to load resource: the server responded with a status of 404 (Not Found)'\n+   }\n+ ]\n- []\n"
+    }
+  ],
+  "httpFailures": [],
+  "requestFailures": [],
+  "consoleErrors": [
+    {
+      "base": "/preview/branch/",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "location": {
+        "url": "http://127.0.0.1:61976/favicon.ico",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "failures": [
+    {
+      "phase": "static-browser-proof-failure",
+      "at": "standalone-site-/preview/branch/",
+      "base": "/preview/branch/",
+      "candidateHashes": {
+        "src/core/publisher/index.js": "20f1934ac45b70f3d02c7731b7a2e43430a133fbb39b7fa55f0ea6f63fa13397",
+        "src/core/publisher/browser.js": "bf97fcec7c59c6e59c8767866238ade22e979c35de99940c4d865d376bdef94e",
+        "tests/publisher/publisher.test.js": "b1d466efbc4c3b0d2c33aa3ed5abe763744dd27d573d2d4368c74f27b34107e5",
+        "tests/publisher/browser-proof.mjs": "6119fffba93c89715b4164441145cb4eabc2ff71415cfcf624e4122316bd3424",
+        "docs/format/publishing.md": "4f07e2ed233a6588047053536b9f6fe5de82897645db87337332635b8a722869"
+      },
+      "outputTreeSha256": "050e50e5bafec7ea6d9b2c9730ef495a4108d1747231d16a817136266f929d84",
+      "error": "AssertionError [ERR_ASSERTION]: Browser logged a console error.\n+ actual - expected\n\n+ [\n+   {\n+     base: '/preview/branch/',\n+     location: {\n+       column: 0,\n+       columnNumber: 0,\n+       line: 0,\n+       lineNumber: 0,\n+       url: 'http://127.0.0.1:61976/favicon.ico'\n+     },\n+     text: 'Failed to load resource: the server responded with a status of 404 (Not Found)'\n+   }\n+ ]\n- []\n\n    at proveBase (file:///Users/danielfosco/workspace/design-notebook/tests/publisher/browser-proof.mjs:318:12)\n    at async file:///Users/danielfosco/workspace/design-notebook/tests/publisher/browser-proof.mjs:510:39",
+      "shellSnapshot": {
+        "url": "http://127.0.0.1:61976/preview/branch/?artifact=existing-catalog",
+        "title": "Design Notebook",
+        "selectedHeading": "Existing book catalog",
+        "selectedView": "catalog-home",
+        "prototypeFrameUrl": null,
+        "graphDiagnostics": [
+          {
+            "code": "CANVAS_EVENT_HISTORY_EXCLUDED",
+            "message": ""
+          },
+          {
+            "code": "SITE_LOCAL_REFERENCE_EXCLUDED",
+            "message": ""
+          }
+        ],
+        "artifactIds": [
+          "borrow-flow",
+          "existing-catalog",
+          "checkout-rationale",
+          "checkout-review"
+        ],
+        "status": [],
+        "bodyText": "Design Notebook\nresearch\nassets\nBorrow a book\nprototype\nExisting book catalog\nsite\nBorrow flow review notes\ndoc\ncheckout-review\ncanvas\n\nSITE\n\nExisting book catalog\nexisting-catalog\nView\nCatalog home\n2 notebook diagnostics\nOpen Catalog home"
+      },
+      "httpFailures": [],
+      "requestFailures": [],
+      "consoleErrors": [
+        {
+          "base": "/preview/branch/",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "location": {
+            "url": "http://127.0.0.1:61976/favicon.ico",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        }
+      ],
+      "pageErrors": [],
+      "staticRequests": [
+        {
+          "path": "/preview/branch/",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/assets/_design-notebook_static-entry-tlr7xeM4.css",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/assets/notebook-CvU-gfTQ.js",
+          "method": "GET"
+        },
+        {
+          "path": "/favicon.ico",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/confirmation",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-D5KUA580.js",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-Ba12So0z.css",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/request",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-Ba12So0z.css",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-D5KUA580.js",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/confirmation",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-Ba12So0z.css",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-D5KUA580.js",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/assets/_design-notebook_static-entry-tlr7xeM4.css",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/assets/notebook-CvU-gfTQ.js",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/confirmation",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-Ba12So0z.css",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-D5KUA580.js",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/notebook-assets/research/catalog.site/assets/catalog-home.svg",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/notebook-assets/research/assets/publisher-proof.svg",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/request",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/confirmation",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-Ba12So0z.css",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-D5KUA580.js",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-Ba12So0z.css",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-D5KUA580.js",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/notebook-data/canvases/checkout-review.jsonl",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/notebook-assets/research/checkout-review.canvas/assets/canvas-proof.svg",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/request",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/confirmation",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-Ba12So0z.css",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-D5KUA580.js",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-Ba12So0z.css",
+          "method": "GET"
+        },
+        {
+          "path": "/preview/branch/prototypes/borrow-flow/assets/index-D5KUA580.js",
+          "method": "GET"
+        }
+      ]
+    }
+  ],
+  "integrity": {
+    "originalStarterTreeSha256Before": "c9bc035755075f781b50f32dfa311f8b4ef0b89ca94dfb72f80a0366ccb380fc",
+    "proofFixtureTreeSha256BeforeBuild": "cd9f90d4394cd4b2ec71d0397f8de6b9e0827226efa47498a281aa147bda4d52",
+    "proofFixtureTreeSha256AtCleanup": "cd9f90d4394cd4b2ec71d0397f8de6b9e0827226efa47498a281aa147bda4d52",
+    "originalStarterTreeSha256AtCleanup": "c9bc035755075f781b50f32dfa311f8b4ef0b89ca94dfb72f80a0366ccb380fc"
+  },
+  "cleanup": {
+    "temporaryTreeRemoved": true,
+    "errors": []
+  },
+  "preflight": {
+    "artifactIds": [
+      "borrow-flow",
+      "checkout-review",
+      "checkout-rationale",
+      "existing-catalog"
+    ],
+    "prototypeTitle": "Borrow a book",
+    "requestStateTitle": "The Shape of Small Things",
+    "confirmationStateTitle": "Your hold is in the queue",
+    "siteView": {
+      "id": "catalog-home",
+      "screenshot": "assets/catalog-home.svg",
+      "publishedUrl": "https://example.com/books"
+    },
+    "graphDiagnosticExpectation": [
+      "CANVAS_EVENT_HISTORY_EXCLUDED",
+      "SITE_LOCAL_REFERENCE_EXCLUDED"
+    ],
+    "finalCanvasViews": {
+      "prototype": "request",
+      "site": "catalog-home"
+    },
+    "shellSelectorHooks": [
+      "notebook-shell__artifact",
+      "notebook-shell__prototype-frame",
+      "notebook-shell__view-select",
+      "notebook-shell__canvas-viewport"
+    ]
+  },
+  "failure": {
+    "phase": "static-publisher-browser-proof-aborted",
+    "at": "standalone-site-/preview/branch/",
+    "candidateHashes": {
+      "src/core/publisher/index.js": "20f1934ac45b70f3d02c7731b7a2e43430a133fbb39b7fa55f0ea6f63fa13397",
+      "src/core/publisher/browser.js": "bf97fcec7c59c6e59c8767866238ade22e979c35de99940c4d865d376bdef94e",
+      "tests/publisher/publisher.test.js": "b1d466efbc4c3b0d2c33aa3ed5abe763744dd27d573d2d4368c74f27b34107e5",
+      "tests/publisher/browser-proof.mjs": "6119fffba93c89715b4164441145cb4eabc2ff71415cfcf624e4122316bd3424",
+      "docs/format/publishing.md": "4f07e2ed233a6588047053536b9f6fe5de82897645db87337332635b8a722869"
+    },
+    "outputHashes": [
+      {
+        "base": "/",
+        "outputTreeSha256": "3012da7d869622be95cb6fc061be8ea9244ccfe3da04fe942e5ca541579a5c57"
+      },
+      {
+        "base": "/preview/branch/",
+        "outputTreeSha256": "050e50e5bafec7ea6d9b2c9730ef495a4108d1747231d16a817136266f929d84"
+      }
+    ],
+    "error": "AssertionError [ERR_ASSERTION]: Browser logged a console error.\n+ actual - expected\n\n+ [\n+   {\n+     base: '/preview/branch/',\n+     location: {\n+       column: 0,\n+       columnNumber: 0,\n+       line: 0,\n+       lineNumber: 0,\n+       url: 'http://127.0.0.1:61976/favicon.ico'\n+     },\n+     text: 'Failed to load resource: the server responded with a status of 404 (Not Found)'\n+   }\n+ ]\n- []\n\n    at proveBase (file:///Users/danielfosco/workspace/design-notebook/tests/publisher/browser-proof.mjs:318:12)\n    at async file:///Users/danielfosco/workspace/design-notebook/tests/publisher/browser-proof.mjs:510:39"
+  },
+  "finishedAt": "2026-10-23T15:13:01.046Z"
+}

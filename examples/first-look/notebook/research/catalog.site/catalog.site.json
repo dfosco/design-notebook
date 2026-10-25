@@ -1,0 +1,22 @@
+{
+  "formatVersion": 1,
+  "id": "existing-catalog",
+  "title": "Existing book catalog",
+  "description": "An external catalog shown as a screenshot and ordinary link.",
+  "local": {
+    "sourcePath": "../catalog-web",
+    "developmentUrl": "http://localhost:4173"
+  },
+  "published": {
+    "url": "https://example.com"
+  },
+  "views": [
+    {
+      "id": "catalog-home",
+      "title": "Catalog home",
+      "path": "/books",
+      "publishedUrl": "https://example.com/books",
+      "screenshot": "assets/catalog-home.svg"
+    }
+  ]
+}

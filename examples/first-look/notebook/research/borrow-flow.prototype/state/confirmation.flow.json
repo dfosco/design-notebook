@@ -1,0 +1,11 @@
+{
+  "request": {
+    "section": "Request complete",
+    "title": "Your hold is in the queue",
+    "summary": "We have recorded this prototype request. In a real service, this screen would explain pickup timing and next steps.",
+    "availability": "Estimated pickup: Friday",
+    "action": "Return to request",
+    "confirmation": "Request received",
+    "finePrint": "Prototype state only. No request was sent to a library."
+  }
+}

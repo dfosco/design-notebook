@@ -1,0 +1,207 @@
+{
+  "formatVersion": 1,
+  "status": "failed",
+  "startedAt": "2026-10-23T15:08:09.531Z",
+  "evidencePath": "/Users/danielfosco/workspace/design-notebook/tests/publisher/browser-proof-evidence.json",
+  "candidateHashes": {
+    "src/core/publisher/index.js": "20f1934ac45b70f3d02c7731b7a2e43430a133fbb39b7fa55f0ea6f63fa13397",
+    "src/core/publisher/browser.js": "bf97fcec7c59c6e59c8767866238ade22e979c35de99940c4d865d376bdef94e",
+    "tests/publisher/publisher.test.js": "b1d466efbc4c3b0d2c33aa3ed5abe763744dd27d573d2d4368c74f27b34107e5",
+    "docs/format/publishing.md": "4f07e2ed233a6588047053536b9f6fe5de82897645db87337332635b8a722869"
+  },
+  "outputHashes": [
+    {
+      "base": "/",
+      "outputTreeSha256": "3012da7d869622be95cb6fc061be8ea9244ccfe3da04fe942e5ca541579a5c57"
+    },
+    {
+      "base": "/preview/branch/",
+      "outputTreeSha256": "050e50e5bafec7ea6d9b2c9730ef495a4108d1747231d16a817136266f929d84"
+    }
+  ],
+  "builds": [
+    {
+      "base": "/",
+      "outputTreeSha256": "3012da7d869622be95cb6fc061be8ea9244ccfe3da04fe942e5ca541579a5c57",
+      "log": "vite v7.3.5 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-nzpCt0/output-root/prototypes/borrow-flow/research/borrow-flow.prototype/src/index.html    0.44 kB │ gzip:  0.28 kB\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-nzpCt0/output-root/prototypes/borrow-flow/assets/index-Ba12So0z.css                        1.49 kB │ gzip:  0.71 kB\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-nzpCt0/output-root/prototypes/borrow-flow/assets/index-q2MElKgW.js                       213.26 kB │ gzip: 67.61 kB\n✓ built in 499ms\nvite v7.3.5 building client environment for production...\ntransforming...\n✓ 41 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/_design-notebook_static-entry-tlr7xeM4.css    8.42 kB │ gzip:  2.09 kB\ndist/assets/notebook-6hB5I36O.js                        247.73 kB │ gzip: 75.24 kB\n✓ built in 340ms\nStatic notebook output: /var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-nzpCt0/output-root\nborrow-flow: /prototypes/borrow-flow/\n"
+    },
+    {
+      "base": "/preview/branch/",
+      "outputTreeSha256": "050e50e5bafec7ea6d9b2c9730ef495a4108d1747231d16a817136266f929d84",
+      "log": "vite v7.3.5 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-nzpCt0/output-prefix/prototypes/borrow-flow/research/borrow-flow.prototype/src/index.html    0.47 kB │ gzip:  0.29 kB\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-nzpCt0/output-prefix/prototypes/borrow-flow/assets/index-Ba12So0z.css                        1.49 kB │ gzip:  0.71 kB\n../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-nzpCt0/output-prefix/prototypes/borrow-flow/assets/index-D5KUA580.js                       213.27 kB │ gzip: 67.62 kB\n✓ built in 671ms\nvite v7.3.5 building client environment for production...\ntransforming...\n✓ 41 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/_design-notebook_static-entry-tlr7xeM4.css    8.42 kB │ gzip:  2.09 kB\ndist/assets/notebook-CvU-gfTQ.js                        247.75 kB │ gzip: 75.25 kB\n✓ built in 328ms\nStatic notebook output: /var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-publisher-browser-proof-nzpCt0/output-prefix\nborrow-flow: /preview/branch/prototypes/borrow-flow/\n"
+    }
+  ],
+  "outputs": [],
+  "phases": [
+    {
+      "phase": "candidate-hashes",
+      "status": "started"
+    },
+    {
+      "phase": "validate-authored-fixture",
+      "status": "started"
+    },
+    {
+      "phase": "validate-authored-fixture",
+      "status": "passed"
+    },
+    {
+      "phase": "add-proof-resources-to-temporary-starter-copy",
+      "status": "started"
+    },
+    {
+      "phase": "cli-build-root",
+      "status": "started"
+    },
+    {
+      "phase": "cli-build-root",
+      "status": "passed",
+      "base": "/",
+      "outputTreeSha256": "3012da7d869622be95cb6fc061be8ea9244ccfe3da04fe942e5ca541579a5c57"
+    },
+    {
+      "phase": "cli-build-prefix",
+      "status": "started"
+    },
+    {
+      "phase": "cli-build-prefix",
+      "status": "passed",
+      "base": "/preview/branch/",
+      "outputTreeSha256": "050e50e5bafec7ea6d9b2c9730ef495a4108d1747231d16a817136266f929d84"
+    },
+    {
+      "phase": "load-browser-driver",
+      "status": "started"
+    },
+    {
+      "phase": "load-browser-driver",
+      "status": "passed"
+    },
+    {
+      "phase": "shell-and-prototype-/",
+      "status": "failed",
+      "message": "The expression evaluated to a falsy value:\n\n  assert.ok(new URL(await prototypeFrame.getAttribute('src')).pathname.startsWith(`${base}prototypes/borrow-flow/confirmation/`))\n"
+    }
+  ],
+  "httpFailures": [],
+  "requestFailures": [],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failures": [
+    {
+      "phase": "static-browser-proof-failure",
+      "at": "shell-and-prototype-/",
+      "base": "/",
+      "candidateHashes": {
+        "src/core/publisher/index.js": "20f1934ac45b70f3d02c7731b7a2e43430a133fbb39b7fa55f0ea6f63fa13397",
+        "src/core/publisher/browser.js": "bf97fcec7c59c6e59c8767866238ade22e979c35de99940c4d865d376bdef94e",
+        "tests/publisher/publisher.test.js": "b1d466efbc4c3b0d2c33aa3ed5abe763744dd27d573d2d4368c74f27b34107e5",
+        "docs/format/publishing.md": "4f07e2ed233a6588047053536b9f6fe5de82897645db87337332635b8a722869"
+      },
+      "outputTreeSha256": "3012da7d869622be95cb6fc061be8ea9244ccfe3da04fe942e5ca541579a5c57",
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(new URL(await prototypeFrame.getAttribute('src')).pathname.startsWith(`${base}prototypes/borrow-flow/confirmation/`))\n\n    at proveBase (file:///Users/danielfosco/workspace/design-notebook/tests/publisher/browser-proof.mjs:226:12)\n    at async file:///Users/danielfosco/workspace/design-notebook/tests/publisher/browser-proof.mjs:462:39",
+      "shellSnapshot": {
+        "url": "http://127.0.0.1:61695/?artifact=borrow-flow&view=confirmation",
+        "title": "Design Notebook",
+        "selectedHeading": "Borrow a book",
+        "selectedView": "confirmation",
+        "artifactIds": [
+          "borrow-flow",
+          "existing-catalog",
+          "checkout-rationale",
+          "checkout-review"
+        ],
+        "status": [],
+        "bodyText": "Design Notebook\nresearch\nassets\nBorrow a book\nprototype\nExisting book catalog\nsite\nBorrow flow review notes\ndoc\ncheckout-review\ncanvas\n\nPROTOTYPE\n\nBorrow a book\nborrow-flow\nView\nBorrow request\nRequest form\nRequest confirmation\n2 notebook diagnostics"
+      },
+      "httpFailures": [],
+      "requestFailures": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "staticRequests": [
+        {
+          "path": "/",
+          "method": "GET"
+        },
+        {
+          "path": "/assets/_design-notebook_static-entry-tlr7xeM4.css",
+          "method": "GET"
+        },
+        {
+          "path": "/assets/notebook-6hB5I36O.js",
+          "method": "GET"
+        },
+        {
+          "path": "/favicon.ico",
+          "method": "GET"
+        },
+        {
+          "path": "/prototypes/borrow-flow/confirmation",
+          "method": "GET"
+        },
+        {
+          "path": "/prototypes/borrow-flow/assets/index-q2MElKgW.js",
+          "method": "GET"
+        },
+        {
+          "path": "/prototypes/borrow-flow/assets/index-Ba12So0z.css",
+          "method": "GET"
+        }
+      ]
+    }
+  ],
+  "integrity": {
+    "originalStarterTreeSha256Before": "c9bc035755075f781b50f32dfa311f8b4ef0b89ca94dfb72f80a0366ccb380fc",
+    "proofFixtureTreeSha256BeforeBuild": "cd9f90d4394cd4b2ec71d0397f8de6b9e0827226efa47498a281aa147bda4d52",
+    "proofFixtureTreeSha256AtCleanup": "cd9f90d4394cd4b2ec71d0397f8de6b9e0827226efa47498a281aa147bda4d52",
+    "originalStarterTreeSha256AtCleanup": "c9bc035755075f781b50f32dfa311f8b4ef0b89ca94dfb72f80a0366ccb380fc"
+  },
+  "cleanup": {
+    "temporaryTreeRemoved": true,
+    "errors": []
+  },
+  "preflight": {
+    "artifactIds": [
+      "borrow-flow",
+      "checkout-review",
+      "checkout-rationale",
+      "existing-catalog"
+    ],
+    "prototypeTitle": "Borrow a book",
+    "requestStateTitle": "The Shape of Small Things",
+    "confirmationStateTitle": "Your hold is in the queue",
+    "siteView": {
+      "id": "catalog-home",
+      "screenshot": "assets/catalog-home.svg",
+      "publishedUrl": "https://example.com/books"
+    },
+    "shellSelectorHooks": [
+      "notebook-shell__artifact",
+      "notebook-shell__prototype-frame",
+      "notebook-shell__view-select",
+      "notebook-shell__canvas-viewport"
+    ]
+  },
+  "failure": {
+    "phase": "static-publisher-browser-proof-aborted",
+    "at": "shell-and-prototype-/",
+    "candidateHashes": {
+      "src/core/publisher/index.js": "20f1934ac45b70f3d02c7731b7a2e43430a133fbb39b7fa55f0ea6f63fa13397",
+      "src/core/publisher/browser.js": "bf97fcec7c59c6e59c8767866238ade22e979c35de99940c4d865d376bdef94e",
+      "tests/publisher/publisher.test.js": "b1d466efbc4c3b0d2c33aa3ed5abe763744dd27d573d2d4368c74f27b34107e5",
+      "docs/format/publishing.md": "4f07e2ed233a6588047053536b9f6fe5de82897645db87337332635b8a722869"
+    },
+    "outputHashes": [
+      {
+        "base": "/",
+        "outputTreeSha256": "3012da7d869622be95cb6fc061be8ea9244ccfe3da04fe942e5ca541579a5c57"
+      },
+      {
+        "base": "/preview/branch/",
+        "outputTreeSha256": "050e50e5bafec7ea6d9b2c9730ef495a4108d1747231d16a817136266f929d84"
+      }
+    ],
+    "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(new URL(await prototypeFrame.getAttribute('src')).pathname.startsWith(`${base}prototypes/borrow-flow/confirmation/`))\n\n    at proveBase (file:///Users/danielfosco/workspace/design-notebook/tests/publisher/browser-proof.mjs:226:12)\n    at async file:///Users/danielfosco/workspace/design-notebook/tests/publisher/browser-proof.mjs:462:39"
+  },
+  "finishedAt": "2026-10-23T15:08:13.745Z"
+}

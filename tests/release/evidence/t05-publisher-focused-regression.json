@@ -1,0 +1,26 @@
+{
+  "formatVersion": 1,
+  "recordType": "focused-regression",
+  "taskRef": "#g008#t05#r7",
+  "runAt": "2026-10-25 (manager-serialized focused publisher regression slot)",
+  "command": "node --test --test-name-pattern \"publishNotebook bundles a mixed nested notebook at root and under a hosting prefix\" tests/publisher/publisher.test.js",
+  "realExit": 0,
+  "result": { "tests": 1, "pass": 1, "fail": 0, "cancelled": 0, "durationMs": 17600.771041 },
+  "rootPrefixResults": {
+    "root": "passed: canonical routes, redirect with preserved query, entry resolved from emitted index.html, base-included asset fetches",
+    "prefix": "passed (same assertions at /preview/branch/)"
+  },
+  "builds": {
+    "scope": "exactly the two in-test production client builds (root and prefix fixtures), manager-authorized",
+    "chunks": ["_design-notebook_static-entry-ChHb3r44.css 195.16 kB", "chunk-CRtwk4OA.js 26.93 kB", "notebook-CzSb91_b.js 600.50 kB", "notebook-RtjCvAdW.js 600.53 kB"],
+    "note": "Split JS chunks confirmed present; entry assertion resolved from index.html, not first-JS readdir."
+  },
+  "cleanup": { "fixtureTempRoots": "removed by test t.after", "noLeftoverProcesses": true, "noLiveServer": true, "noRepoDirWritesOutsideScope": true },
+  "sourceHashes": {
+    "tests/publisher/publisher.test.js": "bdaf1aa033c5618b01e6891b5a0a49bb8147dc7aff094ecf23a388ed01c997b7",
+    "tests/release/consumer-qualification.mjs": "303c920432f02ed4740a3c342a4ac3042629cc945f7ba4257ff560ca1f0e6345",
+    "src/core/publisher/index.js": "aaffcf8e583cf8a1ece399d0d9016a4b2ee00f3b61b5e39124b60fe6de379a04",
+    "note": "Publisher product source unchanged by this run; hashes captured post-run (observed identities, not pins)."
+  },
+  "disposition": "Slot used once and released. No browser/source-CSS compile/pack/install/freeze/live server/full-suite executed."
+}

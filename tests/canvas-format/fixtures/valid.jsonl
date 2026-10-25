@@ -1,0 +1,9 @@
+{"event":"canvas_created","formatVersion":1,"canvasId":"design-review","title":"Design review","widgets":[{"id":"note-1","type":"sticky-note","position":{"x":10,"y":20},"props":{"width":320,"height":120,"text":"Initial note","tone":"blue"},"extension":{"origin":"agent"}}],"sources":[],"connectors":[]}
+{"event":"widget_added","widget":{"id":"image-1","type":"image","position":{"x":400,"y":24},"props":{"width":480,"height":300,"src":"assets/reference.png","alt":"Reference screen"}}}
+{"event":"widget_added","widget":{"id":"prototype-1","type":"prototype","position":{"x":920,"y":24},"props":{"width":800,"height":600,"src":"/checkout"}}}
+{"event":"widget_added","widget":{"id":"site-1","type":"site","position":{"x":1760,"y":24},"props":{"width":800,"height":600,"src":"/marketing"}}}
+{"event":"widget_moved","widgetId":"image-1","position":{"x":440,"y":60}}
+{"event":"widget_updated","widgetId":"image-1","props":{"width":520,"height":320}}
+{"event":"widget_updated","widgetId":"note-1","props":{"text":"Updated note","label":"Review note"}}
+{"event":"widget_added","widget":{"id":"temporary","type":"sticky-note","position":{"x":0,"y":0},"props":{"text":"Remove me"}}}
+{"event":"widget_removed","widgetId":"temporary"}

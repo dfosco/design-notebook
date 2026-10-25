@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Docs viewport proof</title>
+    <style>html, body, #root { margin: 0; width: 100%; min-width: 0 } body { font: 16px/1.5 system-ui }</style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      import React from 'react'
+      import { createRoot } from 'react-dom/client'
+      import Content from 'virtual:docs-browser-proof'
+      import { Document } from 'design-notebook/docs'
+
+      const artifacts = [
+        { id: 'proof-prototype', kind: 'prototype', available: true },
+        { id: 'proof-site', kind: 'site', available: true },
+      ]
+      const site = {
+        available: true,
+        id: 'proof-site',
+        kind: 'site',
+        title: 'Proof site',
+        descriptor: {
+          local: { developmentUrl: `${location.origin}/local-site/` },
+          published: { url: 'https://example.test/deployed/' },
+          views: [{ id: 'home', path: '/preview/home?tab=one#top', title: 'Home', screenshot: 'site.svg', publishedUrl: 'https://example.test/deployed/preview/home?tab=one#top' }],
+        },
+      }
+      const resolveArtifact = (id, { kind, viewId, mode }) => kind === 'prototype'
+        ? { available: true, id, kind, viewId, url: mode === 'local' ? `${location.origin}/__docs-proof__/prototype.html?mode=local` : '/__docs-proof__/prototype.html' }
+        : { ...site, viewId, view: site.descriptor.views.find(view => view.id === viewId) }
+      const resolveAsset = () => ({ available: true, url: '/__docs-proof__/site.svg' })
+      const root = createRoot(document.getElementById('root'))
+      window.renderDocsMode = mode => root.render(React.createElement(Document, {
+          Content,
+          artifact: { id: 'browser-width-proof', title: 'Browser width proof', path: 'browser-width-proof.doc.mdx', folderPath: '' },
+          artifacts,
+          mode,
+          baseUrl: location.href,
+          resolveArtifact,
+          resolveAsset,
+        }))
+      window.renderDocsMode('static')
+    </script>
+  </body>
+</html>

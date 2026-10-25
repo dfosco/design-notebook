@@ -1,0 +1,15 @@
+{
+  "formatVersion": 1,
+  "id": "borrow-flow",
+  "title": "Borrow a book",
+  "runtime": {
+    "id": "@dfosco/statefully",
+    "version": "0.2.1"
+  },
+  "entry": "src/index.html",
+  "views": [
+    { "id": "default", "title": "Borrow request", "path": "/" },
+    { "id": "request", "title": "Request form", "path": "/request" },
+    { "id": "confirmation", "title": "Request confirmation", "path": "/confirmation" }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "formatVersion": 1,
+  "status": "prepared-unpinned",
+  "expectedVersion": "0.10.0-first-look",
+  "frozenBy": null,
+  "frozenAt": null,
+  "sourceIdentity": null,
+  "candidateHashes": null,
+  "packedSourceSha256": null,
+  "packedSourceInputRoots": [
+    "bin",
+    "docs/format",
+    "docs/getting-started.md",
+    "docs/authoring.md",
+    "docs/release/0.10.0-first-look.md",
+    "docs/research/canvas-renderer-provenance.md",
+    "examples/first-look/notebook",
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE",
+    "LICENSES",
+    "schemas",
+    "skills",
+    "src"
+  ],
+  "note": "Draft contract shape only; carries no hashes and makes no release claim. Qualification refuses any manifest that is not status \"frozen\" with frozenBy/frozenAt/sourceIdentity, the exact six-file candidateHashes, and a packedSourceSha256 matching the listed notebook-relative input roots. The runtime/package owner must fill and set status \"frozen\" only after local integration proof passes and the exact candidate is hash-stable. Historical pins remain in tests/release/historical-candidate-pins.json."
+}

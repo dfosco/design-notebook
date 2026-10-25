@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://design-notebook.dev/schemas/artifacts/site-v1.json",
+  "title": "Design Notebook external site descriptor",
+  "type": "object",
+  "required": ["formatVersion", "id", "title"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "formatVersion": { "const": 1 },
+    "id": { "$ref": "#/$defs/id" },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "references": { "$ref": "#/$defs/references" },
+    "local": {
+      "type": "object",
+      "properties": {
+        "sourcePath": { "type": "string", "minLength": 1 },
+        "developmentUrl": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": true
+    },
+    "published": {
+      "type": "object",
+      "required": ["url"],
+      "properties": { "url": { "type": "string", "format": "uri", "pattern": "^https?://" } },
+      "additionalProperties": true
+    },
+    "views": { "type": "array", "items": { "$ref": "#/$defs/view" } }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$" },
+    "references": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+    "view": {
+      "type": "object",
+      "required": ["id", "title"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "title": { "type": "string", "minLength": 1 },
+        "path": { "type": "string" },
+        "localUrl": { "type": "string", "format": "uri" },
+        "publishedUrl": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "screenshot": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://design-notebook.dev/schemas/canvas/v1.schema.json",
+  "title": "Design Notebook canvas JSONL event",
+  "description": "Schema for the supported first-look subset of the event-based canvas document stream. Existing event envelopes are retained; canvasId is an additive identity field on canvas_created.",
+  "oneOf": [
+    { "$ref": "#/$defs/canvasCreated" },
+    { "$ref": "#/$defs/widgetAdded" },
+    { "$ref": "#/$defs/widgetUpdated" },
+    { "$ref": "#/$defs/widgetMoved" },
+    { "$ref": "#/$defs/widgetRemoved" },
+    { "$ref": "#/$defs/unknownOptionalEvent" }
+  ],
+  "$defs": {
+    "record": {
+      "type": "object",
+      "required": ["event"],
+      "properties": {
+        "event": { "type": "string", "minLength": 1 },
+        "required": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "widget": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "type": { "type": "string", "minLength": 1 },
+        "position": {
+          "type": "object",
+          "properties": { "x": { "type": "number" }, "y": { "type": "number" } },
+          "additionalProperties": true
+        },
+        "props": { "type": ["object", "null"] }
+      },
+      "additionalProperties": true
+    },
+    "connector": {
+      "type": "object",
+      "required": ["id", "start", "end"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "start": { "type": "object", "required": ["widgetId"], "properties": { "widgetId": { "type": "string", "minLength": 1 } }, "additionalProperties": true },
+        "end": { "type": "object", "required": ["widgetId"], "properties": { "widgetId": { "type": "string", "minLength": 1 } }, "additionalProperties": true }
+      },
+      "additionalProperties": true
+    },
+    "canvasCreated": {
+      "allOf": [
+        { "$ref": "#/$defs/record" },
+        {
+          "type": "object",
+          "required": ["event"],
+          "properties": {
+            "event": { "const": "canvas_created" },
+            "formatVersion": { "enum": [1, 2] },
+            "canvasId": { "type": "string", "minLength": 1 },
+            "widgets": { "type": "array", "items": { "$ref": "#/$defs/widget" } },
+            "sources": { "type": "array" },
+            "connectors": { "type": "array", "items": { "$ref": "#/$defs/connector" } }
+          }
+        }
+      ]
+    },
+    "widgetAdded": {
+      "allOf": [
+        { "$ref": "#/$defs/record" },
+        { "type": "object", "required": ["widget"], "properties": { "event": { "const": "widget_added" }, "widget": { "$ref": "#/$defs/widget" } } }
+      ]
+    },
+    "widgetUpdated": {
+      "allOf": [
+        { "$ref": "#/$defs/record" },
+        { "type": "object", "required": ["widgetId", "props"], "properties": { "event": { "const": "widget_updated" }, "widgetId": { "type": "string", "minLength": 1 }, "props": { "type": "object" } } }
+      ]
+    },
+    "widgetMoved": {
+      "allOf": [
+        { "$ref": "#/$defs/record" },
+        { "type": "object", "required": ["widgetId", "position"], "properties": { "event": { "const": "widget_moved" }, "widgetId": { "type": "string", "minLength": 1 }, "position": { "type": "object", "required": ["x", "y"], "properties": { "x": { "type": "number" }, "y": { "type": "number" } }, "additionalProperties": true } } }
+      ]
+    },
+    "widgetRemoved": {
+      "allOf": [
+        { "$ref": "#/$defs/record" },
+        {
+          "type": "object",
+          "properties": { "event": { "const": "widget_removed" }, "widgetId": { "type": "string", "minLength": 1 }, "widget": { "$ref": "#/$defs/widget" } },
+          "anyOf": [{ "required": ["widgetId"] }, { "required": ["widget"] }]
+        }
+      ]
+    },
+    "unknownOptionalEvent": {
+      "allOf": [
+        { "$ref": "#/$defs/record" },
+        { "not": { "properties": { "event": { "enum": ["canvas_created", "widget_added", "widget_updated", "widget_moved", "widget_removed", "settings_updated", "source_updated", "widgets_replaced", "connector_added", "connector_removed", "connectors_replaced", "connector_waypoints_set", "connector_waypoints_cleared", "connector_updated", "canvas_layout_updated", "canvas_layout_restored"] } } } },
+        { "properties": { "required": { "not": { "const": true } } } }
+      ]
+    }
+  }
+}

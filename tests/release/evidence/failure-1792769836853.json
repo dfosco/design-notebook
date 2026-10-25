@@ -1,0 +1,29 @@
+{
+  "formatVersion": 1,
+  "phase": "consumer-qualification",
+  "status": "failed",
+  "environment": {
+    "node": "v20.19.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "startedAt": "2026-10-23T15:37:16.803Z",
+  "checks": [],
+  "failures": [
+    {
+      "message": "Installed CLI must be exposed through package bin metadata.\n+ actual - expected\n\n+ './bin/design-notebook.js'\n- 'bin/design-notebook.js'",
+      "stack": "AssertionError [ERR_ASSERTION]: Installed CLI must be exposed through package bin metadata.\n+ actual - expected\n\n+ './bin/design-notebook.js'\n- 'bin/design-notebook.js'\n    at runQualification (file:///Users/danielfosco/workspace/design-notebook/tests/release/consumer-qualification.mjs:274:10)\n    at file:///Users/danielfosco/workspace/design-notebook/tests/release/consumer-qualification.mjs:482:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:263:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:540:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)"
+    }
+  ],
+  "cleanup": {
+    "devServerStopped": false,
+    "staticServersStopped": true,
+    "tempTreeRemoved": false,
+    "errors": []
+  },
+  "sourceExampleSha256": "c9bc035755075f781b50f32dfa311f8b4ef0b89ca94dfb72f80a0366ccb380fc",
+  "candidateHashes": {},
+  "sourceExampleAfterSha256": "c9bc035755075f781b50f32dfa311f8b4ef0b89ca94dfb72f80a0366ccb380fc",
+  "sourceExampleUnchanged": true,
+  "finishedAt": "2026-10-23T15:37:16.852Z"
+}

@@ -1,0 +1,6 @@
+{"event":"canvas_created","formatVersion":1,"canvasId":"checkout-review","title":"Borrow flow review","width":1100,"height":760,"widgets":[],"sources":[],"connectors":[]}
+{"event":"widget_added","widget":{"id":"prototype-preview","type":"prototype","position":{"x":32,"y":32},"props":{"artifactId":"borrow-flow","viewId":"request","width":420,"height":300}}}
+{"event":"widget_added","widget":{"id":"confirmation-preview","type":"prototype","position":{"x":500,"y":32},"props":{"artifactId":"borrow-flow","viewId":"confirmation","width":420,"height":300}}}
+{"event":"widget_added","widget":{"id":"catalog-view","type":"site","position":{"x":32,"y":360},"props":{"artifactId":"existing-catalog","viewId":"catalog-home","width":420,"height":300}}}
+{"event":"widget_added","widget":{"id":"review-note","type":"sticky-note","position":{"x":500,"y":360},"props":{"text":"Check whether the request action explains what happens next.","width":390,"height":132}}}
+{"event":"widget_added","widget":{"id":"chart-reference","type":"chart","position":{"x":470,"y":520},"props":{"width":360,"height":180,"fallback":{"type":"text","text":"The circulation chart is not included in this first-look viewer. Compare the source report when available."}}}}

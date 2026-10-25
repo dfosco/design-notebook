@@ -1,0 +1,308 @@
+{
+  "formatVersion": 1,
+  "phase": "consumer-qualification",
+  "status": "prepared-for-browser-review",
+  "environment": {
+    "node": "v20.19.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "nodeExecutable": "/Users/danielfosco/.npm/_npx/39eeea3b362d2c2d/node_modules/node/bin/node",
+    "nodeFromPath": "/Users/danielfosco/.npm/_npx/39eeea3b362d2c2d/node_modules/node/bin/node",
+    "npm": "10.8.2"
+  },
+  "startedAt": "2026-10-23T15:55:20.032Z",
+  "checks": [
+    {
+      "name": "pack-list-and-attribution",
+      "status": "passed",
+      "entryCount": 58,
+      "requiredFiles": [
+        "LICENSE",
+        "LICENSES/tiny-canvas-MIT.txt",
+        "README.md",
+        "bin/design-notebook.js",
+        "docs/getting-started.md",
+        "docs/authoring.md",
+        "docs/release/0.10.0-first-look.md",
+        "docs/research/canvas-renderer-provenance.md",
+        "src/client/shell/index.js",
+        "src/client/shell/style.css",
+        "src/client/docs/index.js",
+        "src/client/docs/style.css",
+        "src/client/sites/index.js",
+        "src/client/sites/style.css",
+        "src/vendor/tiny-canvas/style.css",
+        "src/core/runtime/index.js",
+        "src/core/publisher/index.js",
+        "examples/first-look/notebook/research/borrow-flow.prototype/borrow-flow.prototype.json",
+        "examples/first-look/notebook/research/checkout-review.canvas/checkout-review.canvas.jsonl",
+        "examples/first-look/notebook/research/checkout-rationale.doc.mdx",
+        "examples/first-look/notebook/research/catalog.site/catalog.site.json",
+        "skills/design-notebook-authoring/SKILL.md"
+      ],
+      "packageArchive": {
+        "filename": "design-notebook-0.10.0-first-look.tgz",
+        "shasum": "7229df3a3869f9ba2f4d466a7d53323cb1a9a32a",
+        "integrity": "sha512-zxwWX/poN4a536nhw6EOowrjpvNp6H1G1LqdZxUSEHHqJp/TaRAiu3pR2iB44S6VRznvVaVq9TnXCRIdUrwu8A==",
+        "sha256": "d942b7e586341a1ec0cabd34e07417d02ff0424fcb0abaa200d3cfab92654d28",
+        "entryCount": 58
+      }
+    },
+    {
+      "name": "clean-install-and-public-entry",
+      "status": "passed",
+      "installedVersion": "0.10.0-first-look",
+      "installedBin": "node_modules/.bin/design-notebook",
+      "exportNames": [
+        "ARTIFACT_DIRECTORY_SUFFIXES",
+        "NOTEBOOK_INFRASTRUCTURE_DIRECTORIES",
+        "NOTEBOOK_RUNTIME_REFRESH_EVENT",
+        "buildNotebook",
+        "createNotebookRuntime",
+        "createPrototypeRouteBinding",
+        "discoverNotebook",
+        "prototypeRouteBasePath",
+        "publishNotebook",
+        "resolveNotebookPath"
+      ]
+    },
+    {
+      "name": "included-example-and-mixed-scale-fixture",
+      "status": "passed",
+      "artifactCount": 64,
+      "kinds": [
+        "canvas",
+        "doc",
+        "prototype",
+        "site"
+      ],
+      "nestedGroup": "research/scale/group-*/flows|notes"
+    },
+    {
+      "name": "direct-add-edit-rename-discovery",
+      "status": "passed",
+      "stableId": "release-added",
+      "finalPath": "research/scale/group-08/flows/release-renamed.doc.mdx"
+    },
+    {
+      "name": "invalid-file-diagnostic-and-recovery",
+      "status": "passed",
+      "artifactId": "existing-catalog",
+      "unavailableObserved": true,
+      "recoveryObserved": true
+    },
+    {
+      "name": "parent-folder-move-preserves-identity-and-grouping",
+      "status": "passed",
+      "artifactCount": 64,
+      "siteFolderPath": "workspace/review-cycle/catalog.site",
+      "documentPath": "workspace/review-cycle/checkout-rationale.doc.mdx"
+    },
+    {
+      "name": "direct-source-edit-through-installed-runtime",
+      "status": "passed",
+      "marker": "source-edit-1792770927487",
+      "response": {
+        "url": "http://127.0.0.1:5173/workspace/review-cycle/borrow-flow.prototype/src/main.jsx",
+        "status": 200,
+        "contentType": "text/javascript",
+        "markerValue": "source-edit-1792770927487",
+        "markerValueFound": true,
+        "bodyLength": 8967,
+        "bodySha256": "9333ab37d7c7416ea9c9dd28517743733dafd8ee443e8bcadd3359d4e288e12e",
+        "bodyExcerpt": "  fileName: \"/private/var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/consumer/notebook/workspace/review-cycle/borrow-flow.prototype/src/main.jsx\",\n    lineNumber: 34,\n    columnNumber: 3\n  }, this)\n);\nwindow.releaseConsumerMarker = \"source-edit-1792770927487\";\nvar _c;\n$RefreshReg$(_c, \"PrototypeApp\");\nimport * as RefreshRuntime from \"/@react-refresh\";\nconst inWebWorker = typeof WorkerGlobalScope !== \"undefined\" && self instanceof WorkerGlobalScope;\nif (import.meta.hot && !inWebWorker) {\n  if (!w",
+        "executableMarkerFound": true
+      }
+    },
+    {
+      "name": "installed-cli-static-root-prefix-and-source-preservation",
+      "status": "passed",
+      "builds": {
+        "root": {
+          "base": "/",
+          "outputHash": "7bbb0ab913d49810e07cef4f3a7815d0868ff0f70e13570b29a9c9fdbe5c3705"
+        },
+        "prefix": {
+          "base": "/preview/branch/",
+          "outputHash": "f854ff9783007dbfcaa83d80067f3d57102fb6b234a3f4e176032f68327af88f"
+        }
+      },
+      "sourceTreeSha256": "fea7f2ccc64f1006e83223368a9b0ed88e7d9d2c1a1a773ab39bf100c5726587",
+      "viteCache": {
+        "beforeBuild": {
+          "fileCount": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "files": []
+        },
+        "afterBuild": {
+          "fileCount": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "files": []
+        }
+      }
+    },
+    {
+      "name": "static-http-root-direct-routes-and-assets",
+      "status": 200,
+      "base": "/",
+      "origin": "http://127.0.0.1:50748/"
+    },
+    {
+      "name": "static-http-prefix-direct-routes-and-assets",
+      "status": 200,
+      "base": "/preview/branch/",
+      "origin": "http://127.0.0.1:50751/preview/branch/"
+    }
+  ],
+  "failures": [],
+  "cleanup": {
+    "devServerStopped": true,
+    "staticServersStopped": true,
+    "tempTreeRemoved": false,
+    "errors": []
+  },
+  "sourceExampleSha256": "c9bc035755075f781b50f32dfa311f8b4ef0b89ca94dfb72f80a0366ccb380fc",
+  "package": {
+    "name": "design-notebook",
+    "version": "0.10.0-first-look",
+    "license": "MIT",
+    "engines": {
+      "node": "^20.19.0 || >=22.12.0"
+    }
+  },
+  "candidateHashes": {
+    "LICENSE": "26793f4b878a36d3f099267fdc8e1780d7ba24b6e65994a93fd20d61afe56c86",
+    "package.json": "c45d3e0b04e0b8da3bdeba510183a650e93edbe7243a7bb4a662668b65e9d019",
+    "package-lock.json": "adb07ea53015aca2d209753d7cd47eba3d36db55379db87b8a3c8280722dd3e5",
+    "index.js": "14257a9bf8a087106b6527f5d59b94845dcc0fd6e6c0df32c783a9a09411c212",
+    "index.d.ts": "213fdb0f506abd4a71462962576d00fca120dc18633cb50beea00ff53efe3199",
+    "bin/design-notebook.js": "d7af28b1a6b804e6d912ba0e0f549c2dd6848532a95f374884d997f5ac98494e"
+  },
+  "packageArchive": {
+    "filename": "design-notebook-0.10.0-first-look.tgz",
+    "shasum": "7229df3a3869f9ba2f4d466a7d53323cb1a9a32a",
+    "integrity": "sha512-zxwWX/poN4a536nhw6EOowrjpvNp6H1G1LqdZxUSEHHqJp/TaRAiu3pR2iB44S6VRznvVaVq9TnXCRIdUrwu8A==",
+    "sha256": "d942b7e586341a1ec0cabd34e07417d02ff0424fcb0abaa200d3cfab92654d28",
+    "entryCount": 58
+  },
+  "localOrigin": "http://127.0.0.1:5173/",
+  "devServerTrace": {
+    "startedAt": "2026-10-23T15:55:25.581Z",
+    "events": [
+      {
+        "name": "spawn",
+        "at": "2026-10-23T15:55:25.582Z"
+      },
+      {
+        "name": "exit",
+        "at": "2026-10-23T15:55:27.794Z",
+        "exitCode": 0,
+        "signalCode": null
+      },
+      {
+        "name": "close",
+        "at": "2026-10-23T15:55:27.795Z",
+        "exitCode": 0,
+        "signalCode": null
+      }
+    ],
+    "signals": [
+      {
+        "signal": "SIGINT",
+        "at": "2026-10-23T15:55:27.752Z",
+        "exitCodeBefore": null,
+        "signalCodeBefore": null,
+        "sent": true,
+        "exitObserved": true
+      }
+    ],
+    "serverLiveness": [
+      {
+        "at": "2026-10-23T15:55:27.742Z",
+        "phase": "before-stop",
+        "status": 200,
+        "alive": true
+      },
+      {
+        "at": "2026-10-23T15:55:27.794Z",
+        "phase": "after-SIGINT",
+        "alive": false,
+        "error": "fetch failed"
+      }
+    ],
+    "shutdown": {
+      "at": "2026-10-23T15:55:27.796Z",
+      "trigger": "SIGINT",
+      "exitCode": 0,
+      "signalCode": null,
+      "exitEvent": {
+        "name": "exit",
+        "at": "2026-10-23T15:55:27.794Z",
+        "exitCode": 0,
+        "signalCode": null
+      },
+      "closeEvent": {
+        "name": "close",
+        "at": "2026-10-23T15:55:27.795Z",
+        "exitCode": 0,
+        "signalCode": null
+      },
+      "exited": true,
+      "graceful": true,
+      "stopped": true
+    }
+  },
+  "devServerShutdown": {
+    "at": "2026-10-23T15:55:27.796Z",
+    "trigger": "SIGINT",
+    "exitCode": 0,
+    "signalCode": null,
+    "exitEvent": {
+      "name": "exit",
+      "at": "2026-10-23T15:55:27.794Z",
+      "exitCode": 0,
+      "signalCode": null
+    },
+    "closeEvent": {
+      "name": "close",
+      "at": "2026-10-23T15:55:27.795Z",
+      "exitCode": 0,
+      "signalCode": null
+    },
+    "exited": true,
+    "graceful": true,
+    "stopped": true
+  },
+  "builds": {
+    "root": {
+      "base": "/",
+      "outputRoot": "/var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/output-root",
+      "outputHash": "7bbb0ab913d49810e07cef4f3a7815d0868ff0f70e13570b29a9c9fdbe5c3705",
+      "log": "vite v7.3.7 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\n../../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/output-root/prototypes/borrow-flow/workspace/review-cycle/borrow-flow.prototype/src/index.html    0.44 kB │ gzip:  0.28 kB\n../../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/output-root/prototypes/borrow-flow/assets/index-Ba12So0z.css                                      1.49 kB │ gzip:  0.71 kB\n../../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/output-root/prototypes/borrow-flow/assets/index-Bix69D4_.js                                     213.32 kB │ gzip: 67.79 kB\n✓ built in 1.03s\nvite v7.3.7 building client environment for production...\ntransforming...\n✓ 101 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/_design-notebook_static-entry-tlr7xeM4.css    8.42 kB │ gzip:  2.08 kB\ndist/assets/notebook-CKBwh6dY.js                        308.77 kB │ gzip: 79.26 kB\n✓ built in 1.22s\nStatic notebook output: /var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/output-root\nborrow-flow: /prototypes/borrow-flow/\n"
+    },
+    "prefix": {
+      "base": "/preview/branch/",
+      "outputRoot": "/var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/output-prefix",
+      "outputHash": "f854ff9783007dbfcaa83d80067f3d57102fb6b234a3f4e176032f68327af88f",
+      "log": "vite v7.3.7 building client environment for production...\ntransforming...\n✓ 40 modules transformed.\nrendering chunks...\ncomputing gzip size...\n../../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/output-prefix/prototypes/borrow-flow/workspace/review-cycle/borrow-flow.prototype/src/index.html    0.47 kB │ gzip:  0.29 kB\n../../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/output-prefix/prototypes/borrow-flow/assets/index-Ba12So0z.css                                      1.49 kB │ gzip:  0.71 kB\n../../../../../../../../../var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/output-prefix/prototypes/borrow-flow/assets/index-zs_GtHZS.js                                     213.33 kB │ gzip: 67.80 kB\n✓ built in 666ms\nvite v7.3.7 building client environment for production...\ntransforming...\n✓ 101 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/_design-notebook_static-entry-tlr7xeM4.css    8.42 kB │ gzip:  2.08 kB\ndist/assets/notebook-DyRbKmVS.js                        308.78 kB │ gzip: 79.27 kB\n✓ built in 558ms\nStatic notebook output: /var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/output-prefix\nborrow-flow: /preview/branch/prototypes/borrow-flow/\n"
+    }
+  },
+  "sourceTreeSha256": "fea7f2ccc64f1006e83223368a9b0ed88e7d9d2c1a1a773ab39bf100c5726587",
+  "viteCache": {
+    "beforeBuild": {
+      "fileCount": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "files": []
+    },
+    "afterBuild": {
+      "fileCount": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "files": []
+    }
+  },
+  "temporaryRoot": "/var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F",
+  "notebookRoot": "/var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/consumer/notebook",
+  "consumerDirectory": "/var/folders/c9/lm4c8s3n3677bzt934zgsf0m0000gp/T/design-notebook-clean-consumer-ABxI7F/consumer",
+  "finishedAt": "2026-10-23T15:55:32.631Z",
+  "statePath": "/Users/danielfosco/workspace/design-notebook/tests/release/evidence/d942b7e586341a1ec0cabd34e07417d02ff0424fcb0abaa200d3cfab92654d28.prepared.json"
+}

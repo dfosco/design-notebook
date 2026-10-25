@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Site view browser proof</title>
+    <style>
+      html, body, #root { box-sizing: border-box; margin: 0; width: 100%; min-width: 0 }
+      body { font: 16px/1.4 system-ui }
+      main { box-sizing: border-box; display: grid; gap: 1rem; width: 100%; padding: 1rem; min-width: 0 }
+      section { min-width: 0 }
+    </style>
+  </head>
+  <body>
+    <main id="root"></main>
+    <script>window.siteProofOrigin = '__SITE_PROOF_ORIGIN__'</script>
+    <script type="module">
+      import React from 'react'
+      import { createRoot } from 'react-dom/client'
+      import { SiteView } from 'design-notebook/sites'
+
+      const siteOrigin = window.siteProofOrigin
+      const artifact = {
+        id: 'proof-site',
+        kind: 'site',
+        available: true,
+        folderPath: 'research/catalog.site',
+        descriptor: {
+          title: 'Catalog proof',
+          local: { developmentUrl: `${siteOrigin}/` },
+          published: { url: 'https://published.example/catalog/' },
+          views: [
+            {
+              id: 'home', title: 'Home', path: '/home',
+              localUrl: `${siteOrigin}/ready?source=direct#home`,
+              publishedUrl: 'https://published.example/catalog/home?source=direct#top',
+              screenshot: 'assets/home.svg',
+            },
+            {
+              id: 'blocked', title: 'Blocked embed', path: '/blocked',
+              localUrl: `${siteOrigin}/blocked?source=direct#blocked`,
+              publishedUrl: 'https://published.example/catalog/blocked',
+              screenshot: 'assets/home.svg',
+            },
+          ],
+        },
+      }
+      const resolveArtifact = (_id, { viewId }) => ({
+        ...artifact,
+        view: artifact.descriptor.views.find(view => view.id === viewId),
+      })
+      const resolveAsset = (_reference, { mode }) => ({
+        available: true,
+        url: mode === 'static' ? '/preview/research/catalog.site/assets/home.svg' : '/__sites-proof__/home.svg',
+      })
+      const props = { artifacts: [artifact], resolveArtifact, resolveAsset }
+      const root = createRoot(document.getElementById('root'))
+      root.render(React.createElement(React.Fragment, null,
+        React.createElement('section', { 'data-proof': 'local-reachable' },
+          React.createElement(SiteView, { ...props, artifactId: 'proof-site', viewId: 'home', mode: 'local' })),
+        React.createElement('section', { 'data-proof': 'local-blocked' },
+          React.createElement(SiteView, { ...props, artifactId: 'proof-site', viewId: 'blocked', mode: 'local' })),
+        React.createElement('section', { 'data-proof': 'static' },
+          React.createElement(SiteView, { ...props, artifactId: 'proof-site', viewId: 'home', mode: 'static' })),
+      ))
+    </script>
+  </body>
+</html>

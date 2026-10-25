@@ -1,0 +1,205 @@
+:root {
+  --dn-shell-sidebar-width: 286px;
+  --dn-shell-surface: var(--ds-color-background, #fff);
+  --dn-shell-page: var(--ds-color-background-muted, #f6f8fa);
+  --dn-shell-text: var(--ds-color-foreground, #1f2328);
+  --dn-shell-muted: var(--ds-color-foreground-muted, #656d76);
+  --dn-shell-border: var(--ds-color-border, #d0d7de);
+  --dn-shell-accent: var(--ds-color-ring, #0969da);
+  --dn-shell-warning: var(--ds-color-warning, #8a4b10);
+  --dn-shell-radius: 0.75rem;
+}
+
+.notebook-shell,
+.notebook-shell * {
+  box-sizing: border-box;
+}
+
+.notebook-shell {
+  width: 100%;
+  min-width: 0;
+  color: var(--dn-shell-text);
+  font: 14px/1.45 var(--ds-font-sans, system-ui, sans-serif);
+}
+
+body:has(.notebook-shell) {
+  margin: 0;
+}
+
+.notebook-shell__view-select select {
+  color: inherit;
+  font: inherit;
+}
+
+.notebook-shell__view-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--dn-shell-muted);
+  white-space: nowrap;
+}
+
+.notebook-shell__view-select select {
+  max-width: 12rem;
+  min-width: 7rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--dn-shell-border);
+  border-radius: 0.4rem;
+  background: var(--dn-shell-surface);
+}
+
+.notebook-shell__empty,
+.notebook-shell__unavailable,
+.notebook-shell__graph-diagnostics {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--dn-shell-border);
+  border-radius: var(--dn-shell-radius);
+  background: var(--dn-shell-surface);
+  overflow-wrap: anywhere;
+}
+
+.notebook-shell__unavailable {
+  border-color: #efc991;
+  color: var(--dn-shell-warning);
+}
+
+.notebook-shell__unavailable h2 { margin-top: 0; }
+.notebook-shell__graph-diagnostics { margin: 0 1rem 1rem; }
+.notebook-shell__graph-diagnostics summary { cursor: pointer; color: var(--dn-shell-warning); font-weight: 650; }
+.notebook-shell__diagnostics { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+
+.notebook-shell__prototype-frame {
+  display: block;
+  flex: 1 1 auto;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--dn-shell-surface);
+}
+
+.notebook-shell__canvas-content { min-width: 0; }
+
+.notebook-shell__canvas-viewport {
+  position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #e9edf3;
+  transform: translateZ(0);
+}
+
+.notebook-shell__canvas-title {
+  position: absolute;
+  z-index: 11;
+  inset: 8px auto auto 24px;
+  display: block;
+  max-width: calc(100% - 40px);
+  margin: 0;
+  padding: 4px 8px;
+  color: var(--dn-shell-muted, #656d76);
+  font-family: var(--tc-font-stack, system-ui, -apple-system, sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.notebook-shell[data-sidebar-open="false"] .notebook-shell__canvas-title {
+  left: 56px;
+  max-width: calc(100% - 72px);
+}
+
+.notebook-shell__canvas-fit {
+  position: fixed;
+  z-index: 11;
+  inset: auto 12px 12px auto;
+}
+
+.notebook-shell__canvas-status {
+  position: fixed;
+  z-index: 11;
+  inset: auto 12px 54px auto;
+  max-width: min(28rem, calc(100% - 24px));
+  padding: 5px 8px;
+  border: 1px solid var(--dn-shell-border);
+  border-radius: 6px;
+  color: var(--dn-shell-muted);
+  background: color-mix(in srgb, var(--dn-shell-surface) 94%, transparent);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  font-size: 12px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.notebook-shell__canvas-status[role="alert"] { color: var(--dn-shell-warning); }
+
+.notebook-shell__canvas-viewport .tc-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  background-color: #f8fafc;
+  overscroll-behavior: contain;
+  --bgColor-default: var(--dn-shell-surface);
+  --bgColor-muted: var(--dn-shell-page);
+  --fgColor-default: var(--dn-shell-text);
+  --fgColor-muted: var(--dn-shell-muted);
+  --borderColor-default: var(--dn-shell-border);
+  --borderColor-muted: var(--dn-shell-border);
+  --focus-outlineColor: var(--dn-shell-accent);
+  --shadow-resting-small: var(--ds-shadow-resting, 0 1px 3px rgb(0 0 0 / 12%));
+  --shadow-floating-small: var(--ds-shadow-floating, 0 4px 12px rgb(0 0 0 / 15%));
+  --overlay-backdrop-bgColor: color-mix(in srgb, var(--dn-shell-muted) 18%, transparent);
+  --tc-bg-muted-default: var(--dn-shell-page);
+  --tc-dot-color-default: var(--overlay-backdrop-bgColor);
+  --tc-shadow-float-default: var(--shadow-floating-small);
+  --tc-border-color: var(--dn-shell-border);
+  --tc-selection-color: var(--dn-shell-accent);
+  --tc-shadow-rest: var(--shadow-resting-small);
+  --tc-border-radius: var(--dn-shell-radius);
+}
+
+.notebook-shell__canvas-viewport .tc-canvas-board { min-width: 100%; min-height: 100%; }
+.notebook-shell__canvas-viewport .tc-canvas-controls {
+  position: fixed;
+  z-index: 10;
+  inset: auto auto 12px 12px;
+  max-inline-size: calc(100% - 24px);
+}
+
+.notebook-shell__canvas-stage {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  flex-direction: column;
+}
+
+.notebook-shell__tiny-canvas .tc-canvas-board { --tc-canvas-zoom: 1; }
+
+html:has(.notebook-shell .tc-canvas),
+body:has(.notebook-shell .tc-canvas) {
+  block-size: auto;
+  margin: 0;
+  overflow: initial;
+  overscroll-behavior-y: auto;
+}
+
+.notebook-shell .doc-renderer,
+.notebook-shell .site-view { width: 100%; max-width: 100%; }

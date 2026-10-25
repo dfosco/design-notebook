@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <rect width="960" height="600" fill="#f3f5f1"/>
+  <rect width="960" height="72" fill="#fff"/>
+  <circle cx="48" cy="36" r="16" fill="#297357"/>
+  <text x="78" y="42" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#20372b">Fieldnotes Library</text>
+  <text x="760" y="42" font-family="Arial, sans-serif" font-size="14" fill="#637168">Catalog  About</text>
+  <text x="72" y="145" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#3b795d">THE COLLECTION</text>
+  <text x="72" y="196" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#20372b">Find your next good read.</text>
+  <rect x="72" y="226" width="816" height="54" rx="8" fill="#fff" stroke="#dfe5df"/>
+  <text x="96" y="260" font-family="Arial, sans-serif" font-size="15" fill="#738077">Search books, authors, or topics</text>
+  <text x="72" y="344" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#26392e">Popular this week</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="72" y="370" width="190" height="158" rx="10" fill="#e5eee7"/><rect x="278" y="370" width="190" height="158" rx="10" fill="#ede6d9"/><rect x="484" y="370" width="190" height="158" rx="10" fill="#e2eaf1"/><rect x="690" y="370" width="198" height="158" rx="10" fill="#eee2e2"/>
+    <text x="90" y="486" font-size="14" font-weight="700" fill="#274b37">Gardens in the City</text><text x="90" y="509" font-size="12" fill="#68756c">R. Molina</text>
+    <text x="296" y="486" font-size="14" font-weight="700" fill="#59492c">A Good Table</text><text x="296" y="509" font-size="12" fill="#776d5a">T. Okafor</text>
+    <text x="502" y="486" font-size="14" font-weight="700" fill="#314d68">Small Blue Hours</text><text x="502" y="509" font-size="12" fill="#687685">M. Arai</text>
+    <text x="708" y="486" font-size="14" font-weight="700" fill="#684142">Walkable Worlds</text><text x="708" y="509" font-size="12" fill="#80696a">P. Singh</text>
+  </g>
+  <text x="72" y="570" font-family="Arial, sans-serif" font-size="12" fill="#849087">Illustrative mock screenshot for the notebook example.</text>
+</svg>

@@ -1,0 +1,41 @@
+.site-view {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.site-view__canvas {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.site-view__canvas > .canvas-scene {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+  background: transparent;
+  background-image: none;
+}
+
+.site-view__canvas .canvas-scene__item {
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.site-view__unavailable {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #f59e0b;
+  border-radius: 0.5rem;
+  background: #fffbeb;
+  color: #78350f;
+  overflow-wrap: anywhere;
+}

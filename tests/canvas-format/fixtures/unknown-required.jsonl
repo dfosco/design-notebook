@@ -1,0 +1,3 @@
+{"event":"canvas_created","formatVersion":1,"canvasId":"required","widgets":[{"id":"known","type":"sticky-note","position":{"x":0,"y":0},"props":{"text":"Prefix"}}]}
+{"event":"widget_moved","widgetId":"known","position":{"x":4,"y":5}}
+{"event":"required_vendor_event","required":true,"payload":{"keep":true}}

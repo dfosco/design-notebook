@@ -1,0 +1,2 @@
+{"event":"canvas_created","formatVersion":1,"canvasId":"extensions","widgets":[{"id":"future","type":"future-widget","position":{"x":1,"y":2},"props":{"futurePayload":{"keep":true}},"vendorField":"retain"}],"sources":[],"connectors":[]}
+{"event":"vendor_annotation","required":false,"extension":{"retain":true}}

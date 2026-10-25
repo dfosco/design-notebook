@@ -1,0 +1,522 @@
+/* Notebook's vendored Tailwind token source. All runtime variables are --ds-*.
+ * The build emits every theme variable (including the stock palette) and only
+ * used ds- utilities. This package deliberately does not import global Preflight.
+ * Do not define a second semantic palette in a component or workspace CSS.
+ */
+/* Reserve foreign Tailwind layers first so their Preflight cannot reset vendored utilities. */
+@layer theme, base, components, utilities, ds-theme, ds-base, ds-components, ds-utilities;
+@import "tailwindcss/theme.css" layer(ds-theme) theme(static) prefix(ds);
+@import "tailwindcss/utilities.css" layer(ds-utilities) prefix(ds) source(none);
+@import "tw-animate-css";
+
+@theme static {
+  --color-background: #ffffff;
+  --color-background-muted: #f6f8fa;
+  --color-background-inset: #f6f8fa;
+  --color-background-emphasis: #25292e;
+  --color-background-inverse: #25292e;
+  --color-background-neutral-muted: #818b981f;
+  --color-background-neutral-emphasis: #59636e;
+  --color-background-accent-muted: #ddf4ff;
+  --color-background-accent-emphasis: #0969da;
+  --color-background-accent-emphasis-hover: #0860c7;
+  --color-background-danger-muted: #ffebe9;
+  --color-background-danger-emphasis: #cf222e;
+  --color-background-danger-emphasis-hover: #a40e26;
+  --color-background-success-muted: #dafbe1;
+  --color-background-success-emphasis: #1f883d;
+  --color-background-success-hover: #1a7f37;
+  --color-background-attention-muted: #fff8c5;
+  --color-background-done-muted: #fbefff;
+  --color-background-done-emphasis: #8250df;
+  --color-background-open-emphasis: #1f883d;
+  --color-background-closed-emphasis: #cf222e;
+  --color-foreground: #1f2328;
+  --color-foreground-muted: #59636e;
+  --color-foreground-hover: #000000;
+  --color-foreground-accent: #0969da;
+  --color-foreground-danger: #d1242f;
+  --color-foreground-success: #1a7f37;
+  --color-foreground-attention: #9a6700;
+  --color-foreground-on-emphasis: #ffffff;
+  --color-foreground-on-inverse: #ffffff;
+  --color-border: #d1d9e0;
+  --color-border-muted: #d1d9e0b3;
+  --color-border-emphasis: #818b98;
+  --color-border-accent-emphasis: #0969da;
+  --color-border-accent-muted: #54aeff66;
+  --color-border-danger-emphasis: #cf222e;
+  --color-border-danger-muted: #ff818266;
+  --color-border-success-muted: #4ac26b66;
+  --color-border-attention-muted: #d4a72c66;
+  --color-overlay-backdrop: #c8d1da66;
+  --shadow-resting: 0px 1px 1px 0px #1f23280f, 0px 1px 3px 0px #1f23280f;
+  --shadow-floating: 0px 0px 0px 1px #d1d9e080, 0px 6px 12px -3px #25292e0a, 0px 6px 18px 0px #25292e1f;
+  --color-card: #ffffff;
+  --color-card-foreground: #1f2328;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1f2328;
+  --color-primary: #1f2328;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f6f8fa;
+  --color-secondary-foreground: #1f2328;
+  --color-muted: #f6f8fa;
+  --color-muted-foreground: #59636e;
+  --color-accent: #ddf4ff;
+  --color-accent-foreground: #0969da;
+  --color-destructive: #cf222e;
+  --color-destructive-foreground: #ffffff;
+  --color-input: #d1d9e0;
+  --color-ring: #0969da;
+  --color-success: #1f883d;
+  --color-success-foreground: #ffffff;
+  --radius: 0.5rem;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+/* The document defaults to the toolbar palette: the Notebook shell, body portals,
+ * dialogs, and app chrome are not part of the canvas. Real canvas surfaces
+ * override this on [data-sb-surface="canvas"], so light/dark can differ.
+ * Every semantic alias is concrete at each boundary: nested light surfaces do
+ * not inherit a dark alias already resolved on an ancestor (or vice versa). */
+@layer ds-theme {
+ :root {
+  --sb--trigger-bg: var(--ds-color-background);
+  --sb--trigger-bg-hover: var(--ds-color-background-muted);
+  --sb--trigger-text: var(--ds-color-foreground);
+  --sb--trigger-border: var(--ds-color-border);
+ }
+ :root[data-sb-toolbar-theme^="light"],
+ :root:not([data-sb-toolbar-theme])[data-sb-theme^="light"],
+ :root:not([data-sb-toolbar-theme]):not([data-sb-theme])[data-sb-canvas-theme^="light"],
+ :root[data-sb-toolbar-theme^="light"] :is([data-core-ui-toolbar], [data-sidepanel], [data-hc-surface="toolbar"], [data-slot="dropdown-menu-content"][data-hc-ui], [data-slot="dropdown-menu-sub-content"][data-hc-ui], [data-slot="command-palette-content"][data-hc-ui], [data-slot="dialog-overlay"][data-hc-ui], [data-slot="dialog-content"][data-hc-ui], [data-slot="popover-content"][data-hc-ui], [data-slot="select-content"][data-hc-ui], [data-slot="tooltip-content"][data-hc-ui]),
+ [data-sb-surface="canvas"][data-sb-canvas-theme^="light"],
+ [data-sb-surface="toolbar"][data-sb-toolbar-theme^="light"] {
+  --ds-color-background: #ffffff;
+  --ds-color-background-muted: #f6f8fa;
+  --ds-color-background-inset: #f6f8fa;
+  --ds-color-background-emphasis: #25292e;
+  --ds-color-background-inverse: #25292e;
+  --ds-color-background-neutral-muted: #818b981f;
+  --ds-color-background-neutral-emphasis: #59636e;
+  --ds-color-background-accent-muted: #ddf4ff;
+  --ds-color-background-accent-emphasis: #0969da;
+  --ds-color-background-accent-emphasis-hover: #0860c7;
+  --ds-color-background-danger-muted: #ffebe9;
+  --ds-color-background-danger-emphasis: #cf222e;
+  --ds-color-background-danger-emphasis-hover: #a40e26;
+  --ds-color-background-success-muted: #dafbe1;
+  --ds-color-background-success-emphasis: #1f883d;
+  --ds-color-background-success-hover: #1a7f37;
+  --ds-color-background-attention-muted: #fff8c5;
+  --ds-color-background-done-muted: #fbefff;
+  --ds-color-background-done-emphasis: #8250df;
+  --ds-color-background-open-emphasis: #1f883d;
+  --ds-color-background-closed-emphasis: #cf222e;
+  --ds-color-foreground: #1f2328;
+  --ds-color-foreground-muted: #59636e;
+  --ds-color-foreground-hover: #000000;
+  --ds-color-foreground-accent: #0969da;
+  --ds-color-foreground-danger: #d1242f;
+  --ds-color-foreground-success: #1a7f37;
+  --ds-color-foreground-attention: #9a6700;
+  --ds-color-foreground-on-emphasis: #ffffff;
+  --ds-color-foreground-on-inverse: #ffffff;
+  --ds-color-border: #d1d9e0;
+  --ds-color-border-muted: #d1d9e0b3;
+  --ds-color-border-emphasis: #818b98;
+  --ds-color-border-accent-emphasis: #0969da;
+  --ds-color-border-accent-muted: #54aeff66;
+  --ds-color-border-danger-emphasis: #cf222e;
+  --ds-color-border-danger-muted: #ff818266;
+  --ds-color-border-success-muted: #4ac26b66;
+  --ds-color-border-attention-muted: #d4a72c66;
+  --ds-color-overlay-backdrop: #c8d1da66;
+  --ds-shadow-resting: 0px 1px 1px 0px #1f23280f, 0px 1px 3px 0px #1f23280f;
+  --ds-shadow-floating: 0px 0px 0px 1px #d1d9e080, 0px 6px 12px -3px #25292e0a, 0px 6px 18px 0px #25292e1f;
+  --ds-color-card: #ffffff;
+  --ds-color-card-foreground: #1f2328;
+  --ds-color-popover: #ffffff;
+  --ds-color-popover-foreground: #1f2328;
+  --ds-color-primary: #1f2328;
+  --ds-color-primary-foreground: #ffffff;
+  --ds-color-secondary: #f6f8fa;
+  --ds-color-secondary-foreground: #1f2328;
+  --ds-color-muted: #f6f8fa;
+  --ds-color-muted-foreground: #59636e;
+  --ds-color-accent: #ddf4ff;
+  --ds-color-accent-foreground: #0969da;
+  --ds-color-destructive: #cf222e;
+  --ds-color-destructive-foreground: #ffffff;
+  --ds-color-input: #d1d9e0;
+  --ds-color-ring: #0969da;
+  --ds-color-success: #1f883d;
+  --ds-color-success-foreground: #ffffff;
+  --ds-radius: 0.5rem;
+  --ds-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ds-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  --ds-radius-xs: 0.25rem;
+  --ds-radius-sm: 0.375rem;
+  --ds-radius-md: 0.5rem;
+  --ds-radius-lg: 0.75rem;
+  --ds-radius-xl: 1rem;
+  --sb--trigger-bg: var(--ds-color-background);
+  --sb--trigger-bg-hover: var(--ds-color-background-muted);
+  --sb--trigger-text: var(--ds-color-foreground);
+  --sb--trigger-border: var(--ds-color-border);
+  color-scheme: light;
+ }
+ :root[data-sb-toolbar-theme^="dark"],
+ :root:not([data-sb-toolbar-theme])[data-sb-theme^="dark"],
+ :root:not([data-sb-toolbar-theme]):not([data-sb-theme])[data-sb-canvas-theme^="dark"],
+ :root[data-sb-toolbar-theme^="dark"] :is([data-core-ui-toolbar], [data-sidepanel], [data-hc-surface="toolbar"], [data-slot="dropdown-menu-content"][data-hc-ui], [data-slot="dropdown-menu-sub-content"][data-hc-ui], [data-slot="command-palette-content"][data-hc-ui], [data-slot="dialog-overlay"][data-hc-ui], [data-slot="dialog-content"][data-hc-ui], [data-slot="popover-content"][data-hc-ui], [data-slot="select-content"][data-hc-ui], [data-slot="tooltip-content"][data-hc-ui]),
+ [data-sb-surface="canvas"][data-sb-canvas-theme^="dark"],
+ [data-sb-surface="toolbar"][data-sb-toolbar-theme^="dark"] {
+  --ds-color-background: #0d1117;
+  --ds-color-background-muted: #151b23;
+  --ds-color-background-inset: #010409;
+  --ds-color-background-emphasis: #3d444d;
+  --ds-color-background-inverse: #ffffff;
+  --ds-color-background-neutral-muted: #656c7633;
+  --ds-color-background-neutral-emphasis: #656c76;
+  --ds-color-background-accent-muted: #388bfd1a;
+  --ds-color-background-accent-emphasis: #1f6feb;
+  --ds-color-background-accent-emphasis-hover: #388bfd;
+  --ds-color-background-danger-muted: #f851491a;
+  --ds-color-background-danger-emphasis: #da3633;
+  --ds-color-background-danger-emphasis-hover: #b62324;
+  --ds-color-background-success-muted: #2ea04326;
+  --ds-color-background-success-emphasis: #238636;
+  --ds-color-background-success-hover: #2ea043;
+  --ds-color-background-attention-muted: #bb800926;
+  --ds-color-background-done-muted: #ab7df81a;
+  --ds-color-background-done-emphasis: #8957e5;
+  --ds-color-background-open-emphasis: #238636;
+  --ds-color-background-closed-emphasis: #da3633;
+  --ds-color-foreground: #f0f6fc;
+  --ds-color-foreground-muted: #9198a1;
+  --ds-color-foreground-hover: #ffffff;
+  --ds-color-foreground-accent: #4493f8;
+  --ds-color-foreground-danger: #f85149;
+  --ds-color-foreground-success: #3fb950;
+  --ds-color-foreground-attention: #d29922;
+  --ds-color-foreground-on-emphasis: #ffffff;
+  --ds-color-foreground-on-inverse: #010409;
+  --ds-color-border: #3d444d;
+  --ds-color-border-muted: #3d444db3;
+  --ds-color-border-emphasis: #656c76;
+  --ds-color-border-accent-emphasis: #1f6feb;
+  --ds-color-border-accent-muted: #388bfd66;
+  --ds-color-border-danger-emphasis: #da3633;
+  --ds-color-border-danger-muted: #f8514966;
+  --ds-color-border-success-muted: #2ea04366;
+  --ds-color-border-attention-muted: #bb800966;
+  --ds-color-overlay-backdrop: #21283066;
+  --ds-shadow-resting: 0px 1px 1px 0px #01040999, 0px 1px 3px 0px #01040999;
+  --ds-shadow-floating: 0px 0px 0px 1px #3d444d, 0px 6px 12px -3px #01040966, 0px 6px 18px 0px #01040966;
+  --ds-color-card: #0d1117;
+  --ds-color-card-foreground: #f0f6fc;
+  --ds-color-popover: #0d1117;
+  --ds-color-popover-foreground: #f0f6fc;
+  --ds-color-primary: #f0f6fc;
+  --ds-color-primary-foreground: #0d1117;
+  --ds-color-secondary: #151b23;
+  --ds-color-secondary-foreground: #f0f6fc;
+  --ds-color-muted: #151b23;
+  --ds-color-muted-foreground: #9198a1;
+  --ds-color-accent: #388bfd1a;
+  --ds-color-accent-foreground: #4493f8;
+  --ds-color-destructive: #da3633;
+  --ds-color-destructive-foreground: #ffffff;
+  --ds-color-input: #3d444d;
+  --ds-color-ring: #1f6feb;
+  --ds-color-success: #238636;
+  --ds-color-success-foreground: #ffffff;
+  --ds-radius: 0.5rem;
+  --ds-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ds-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  --ds-radius-xs: 0.25rem;
+  --ds-radius-sm: 0.375rem;
+  --ds-radius-md: 0.5rem;
+  --ds-radius-lg: 0.75rem;
+  --ds-radius-xl: 1rem;
+  --sb--trigger-bg: var(--ds-color-background);
+  --sb--trigger-bg-hover: var(--ds-color-background-muted);
+  --sb--trigger-text: var(--ds-color-foreground);
+  --sb--trigger-border: var(--ds-color-border);
+  color-scheme: dark;
+ }
+ [data-ds-theme^="light"] {
+  --ds-color-background: #ffffff;
+  --ds-color-background-muted: #f6f8fa;
+  --ds-color-background-inset: #f6f8fa;
+  --ds-color-background-emphasis: #25292e;
+  --ds-color-background-inverse: #25292e;
+  --ds-color-background-neutral-muted: #818b981f;
+  --ds-color-background-neutral-emphasis: #59636e;
+  --ds-color-background-accent-muted: #ddf4ff;
+  --ds-color-background-accent-emphasis: #0969da;
+  --ds-color-background-accent-emphasis-hover: #0860c7;
+  --ds-color-background-danger-muted: #ffebe9;
+  --ds-color-background-danger-emphasis: #cf222e;
+  --ds-color-background-danger-emphasis-hover: #a40e26;
+  --ds-color-background-success-muted: #dafbe1;
+  --ds-color-background-success-emphasis: #1f883d;
+  --ds-color-background-success-hover: #1a7f37;
+  --ds-color-background-attention-muted: #fff8c5;
+  --ds-color-background-done-muted: #fbefff;
+  --ds-color-background-done-emphasis: #8250df;
+  --ds-color-background-open-emphasis: #1f883d;
+  --ds-color-background-closed-emphasis: #cf222e;
+  --ds-color-foreground: #1f2328;
+  --ds-color-foreground-muted: #59636e;
+  --ds-color-foreground-hover: #000000;
+  --ds-color-foreground-accent: #0969da;
+  --ds-color-foreground-danger: #d1242f;
+  --ds-color-foreground-success: #1a7f37;
+  --ds-color-foreground-attention: #9a6700;
+  --ds-color-foreground-on-emphasis: #ffffff;
+  --ds-color-foreground-on-inverse: #ffffff;
+  --ds-color-border: #d1d9e0;
+  --ds-color-border-muted: #d1d9e0b3;
+  --ds-color-border-emphasis: #818b98;
+  --ds-color-border-accent-emphasis: #0969da;
+  --ds-color-border-accent-muted: #54aeff66;
+  --ds-color-border-danger-emphasis: #cf222e;
+  --ds-color-border-danger-muted: #ff818266;
+  --ds-color-border-success-muted: #4ac26b66;
+  --ds-color-border-attention-muted: #d4a72c66;
+  --ds-color-overlay-backdrop: #c8d1da66;
+  --ds-shadow-resting: 0px 1px 1px 0px #1f23280f, 0px 1px 3px 0px #1f23280f;
+  --ds-shadow-floating: 0px 0px 0px 1px #d1d9e080, 0px 6px 12px -3px #25292e0a, 0px 6px 18px 0px #25292e1f;
+  --ds-color-card: #ffffff;
+  --ds-color-card-foreground: #1f2328;
+  --ds-color-popover: #ffffff;
+  --ds-color-popover-foreground: #1f2328;
+  --ds-color-primary: #1f2328;
+  --ds-color-primary-foreground: #ffffff;
+  --ds-color-secondary: #f6f8fa;
+  --ds-color-secondary-foreground: #1f2328;
+  --ds-color-muted: #f6f8fa;
+  --ds-color-muted-foreground: #59636e;
+  --ds-color-accent: #ddf4ff;
+  --ds-color-accent-foreground: #0969da;
+  --ds-color-destructive: #cf222e;
+  --ds-color-destructive-foreground: #ffffff;
+  --ds-color-input: #d1d9e0;
+  --ds-color-ring: #0969da;
+  --ds-color-success: #1f883d;
+  --ds-color-success-foreground: #ffffff;
+  --ds-radius: 0.5rem;
+  --ds-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ds-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  --ds-radius-xs: 0.25rem;
+  --ds-radius-sm: 0.375rem;
+  --ds-radius-md: 0.5rem;
+  --ds-radius-lg: 0.75rem;
+  --ds-radius-xl: 1rem;
+  --sb--trigger-bg: var(--ds-color-background);
+  --sb--trigger-bg-hover: var(--ds-color-background-muted);
+  --sb--trigger-text: var(--ds-color-foreground);
+  --sb--trigger-border: var(--ds-color-border);
+  color-scheme: light;
+ }
+ [data-ds-theme^="dark"] {
+  --ds-color-background: #0d1117;
+  --ds-color-background-muted: #151b23;
+  --ds-color-background-inset: #010409;
+  --ds-color-background-emphasis: #3d444d;
+  --ds-color-background-inverse: #ffffff;
+  --ds-color-background-neutral-muted: #656c7633;
+  --ds-color-background-neutral-emphasis: #656c76;
+  --ds-color-background-accent-muted: #388bfd1a;
+  --ds-color-background-accent-emphasis: #1f6feb;
+  --ds-color-background-accent-emphasis-hover: #388bfd;
+  --ds-color-background-danger-muted: #f851491a;
+  --ds-color-background-danger-emphasis: #da3633;
+  --ds-color-background-danger-emphasis-hover: #b62324;
+  --ds-color-background-success-muted: #2ea04326;
+  --ds-color-background-success-emphasis: #238636;
+  --ds-color-background-success-hover: #2ea043;
+  --ds-color-background-attention-muted: #bb800926;
+  --ds-color-background-done-muted: #ab7df81a;
+  --ds-color-background-done-emphasis: #8957e5;
+  --ds-color-background-open-emphasis: #238636;
+  --ds-color-background-closed-emphasis: #da3633;
+  --ds-color-foreground: #f0f6fc;
+  --ds-color-foreground-muted: #9198a1;
+  --ds-color-foreground-hover: #ffffff;
+  --ds-color-foreground-accent: #4493f8;
+  --ds-color-foreground-danger: #f85149;
+  --ds-color-foreground-success: #3fb950;
+  --ds-color-foreground-attention: #d29922;
+  --ds-color-foreground-on-emphasis: #ffffff;
+  --ds-color-foreground-on-inverse: #010409;
+  --ds-color-border: #3d444d;
+  --ds-color-border-muted: #3d444db3;
+  --ds-color-border-emphasis: #656c76;
+  --ds-color-border-accent-emphasis: #1f6feb;
+  --ds-color-border-accent-muted: #388bfd66;
+  --ds-color-border-danger-emphasis: #da3633;
+  --ds-color-border-danger-muted: #f8514966;
+  --ds-color-border-success-muted: #2ea04366;
+  --ds-color-border-attention-muted: #bb800966;
+  --ds-color-overlay-backdrop: #21283066;
+  --ds-shadow-resting: 0px 1px 1px 0px #01040999, 0px 1px 3px 0px #01040999;
+  --ds-shadow-floating: 0px 0px 0px 1px #3d444d, 0px 6px 12px -3px #01040966, 0px 6px 18px 0px #01040966;
+  --ds-color-card: #0d1117;
+  --ds-color-card-foreground: #f0f6fc;
+  --ds-color-popover: #0d1117;
+  --ds-color-popover-foreground: #f0f6fc;
+  --ds-color-primary: #f0f6fc;
+  --ds-color-primary-foreground: #0d1117;
+  --ds-color-secondary: #151b23;
+  --ds-color-secondary-foreground: #f0f6fc;
+  --ds-color-muted: #151b23;
+  --ds-color-muted-foreground: #9198a1;
+  --ds-color-accent: #388bfd1a;
+  --ds-color-accent-foreground: #4493f8;
+  --ds-color-destructive: #da3633;
+  --ds-color-destructive-foreground: #ffffff;
+  --ds-color-input: #3d444d;
+  --ds-color-ring: #1f6feb;
+  --ds-color-success: #238636;
+  --ds-color-success-foreground: #ffffff;
+  --ds-radius: 0.5rem;
+  --ds-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ds-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  --ds-radius-xs: 0.25rem;
+  --ds-radius-sm: 0.375rem;
+  --ds-radius-md: 0.5rem;
+  --ds-radius-lg: 0.75rem;
+  --ds-radius-xl: 1rem;
+  --sb--trigger-bg: var(--ds-color-background);
+  --sb--trigger-bg-hover: var(--ds-color-background-muted);
+  --sb--trigger-text: var(--ds-color-foreground);
+  --sb--trigger-border: var(--ds-color-border);
+  color-scheme: dark;
+ }
+}
+
+/* Semantic utilities need no dark: overrides. This variant remains available
+ * for non-semantic affordances; an explicit light boundary excludes root dark. */
+/* dark: must follow the element's active surface, never the global canvas mode.
+ * The root is toolbar-owned; a light canvas or toolbar is an explicit exclusion.
+ * Prototype documents are isolated and own their own dark variant. */
+@custom-variant dark (
+  &:where(
+    [data-ds-theme^="dark"], [data-ds-theme^="dark"] *,
+    [data-sb-surface="canvas"][data-sb-canvas-theme^="dark"],
+    [data-sb-surface="canvas"][data-sb-canvas-theme^="dark"] *,
+    [data-sb-surface="toolbar"][data-sb-toolbar-theme^="dark"],
+    [data-sb-surface="toolbar"][data-sb-toolbar-theme^="dark"] *,
+    :root[data-sb-toolbar-theme^="dark"] *,
+    :root:not([data-sb-toolbar-theme])[data-sb-theme^="dark"] *,
+    :root:not([data-sb-toolbar-theme]):not([data-sb-theme])[data-sb-canvas-theme^="dark"] *
+  ):not(:where(
+    [data-ds-theme^="light"], [data-ds-theme^="light"] *,
+    [data-sb-surface="canvas"][data-sb-canvas-theme^="light"],
+    [data-sb-surface="canvas"][data-sb-canvas-theme^="light"] *,
+    [data-sb-surface="toolbar"][data-sb-toolbar-theme^="light"],
+    [data-sb-surface="toolbar"][data-sb-toolbar-theme^="light"] *
+  ))
+);
+
+@custom-variant data-open {
+	&:where([data-state="open"]), &:where([data-open]:not([data-open="false"])) {
+		@slot;
+  }
+}
+@custom-variant data-closed {
+	&:where([data-state="closed"]), &:where([data-closed]:not([data-closed="false"])) {
+		@slot;
+  }
+}
+@custom-variant data-checked {
+	&:where([data-state="checked"]), &:where([data-checked]:not([data-checked="false"])) {
+		@slot;
+  }
+}
+@custom-variant data-unchecked {
+	&:where([data-state="unchecked"]), &:where([data-unchecked]:not([data-unchecked="false"])) {
+		@slot;
+  }
+}
+@custom-variant data-selected {
+	&:where([data-selected]) {
+		@slot;
+  }
+}
+@custom-variant data-disabled {
+	&:where([data-disabled="true"]), &:where([data-disabled]:not([data-disabled="false"])) {
+		@slot;
+  }
+}
+@custom-variant data-active {
+	&:where([data-state="active"]), &:where([data-active]:not([data-active="false"])) {
+		@slot;
+  }
+}
+@custom-variant data-horizontal {
+	&:where([data-orientation="horizontal"]) {
+		@slot;
+  }
+}
+@custom-variant data-vertical {
+	&:where([data-orientation="vertical"]) {
+		@slot;
+  }
+}
+@utility no-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+  }
+}
+
+
+@utility smooth-corners {
+  border-radius: var(--sb--smooth-corners-fallback, 0.75rem);
+  mask-image: var(--sb--smooth-corners-mask, none);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: var(--sb--smooth-corners-mask, none);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  @supports (mask-image: paint(smooth-corners)) {
+    border-radius: 0;
+    mask-image: paint(smooth-corners);
+    -webkit-mask-image: paint(smooth-corners);
+  }
+}
+
+@layer ds-base {
+  :root { --sb--smooth-corners: 4; --sb--radius-md: var(--ds-radius-md); --ds-sidebar-width: 16rem; --ds-sidebar-width-icon: 3rem; --ds-core-styles-ready: 1; }
+  :where([data-hc-ui]) { font-family: var(--ds-font-sans); }
+  /* Scoped reset: no Core rule matches an unprefixed prototype element. */
+  :where([class^="ds-"], [class*=" ds-"], [data-hc-ui]),
+  :where([class^="ds-"], [class*=" ds-"], [data-hc-ui])::before,
+  :where([class^="ds-"], [class*=" ds-"], [data-hc-ui])::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--ds-color-border);
+  }
+  :where(button, input, select, textarea):where([class^="ds-"], [class*=" ds-"], [data-hc-ui]) {
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  :where(h1, h2, h3, h4, p):where([class^="ds-"], [class*=" ds-"], [data-hc-ui]) { margin: 0; }
+  :where(button, [role="button"]):where([class^="ds-"], [class*=" ds-"], [data-hc-ui]):not(:disabled) { cursor: pointer; }
+}

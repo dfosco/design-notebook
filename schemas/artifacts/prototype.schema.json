@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://design-notebook.dev/schemas/artifacts/prototype-v1.json",
+  "title": "Design Notebook prototype descriptor",
+  "type": "object",
+  "required": ["formatVersion", "id", "title", "runtime", "entry"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "formatVersion": { "const": 1 },
+    "id": { "$ref": "#/$defs/id" },
+    "title": { "type": "string", "minLength": 1 },
+    "runtime": {
+      "type": "object",
+      "required": ["id", "version"],
+      "properties": {
+        "id": { "const": "@dfosco/statefully" },
+        "version": { "const": "0.2.1" }
+      },
+      "additionalProperties": true
+    },
+    "entry": { "type": "string", "minLength": 1, "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\).+$" },
+    "references": { "$ref": "#/$defs/references" },
+    "views": { "type": "array", "items": { "$ref": "#/$defs/view" } }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$" },
+    "references": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+    "view": {
+      "type": "object",
+      "required": ["id", "title", "path"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "title": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "pattern": "^/" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

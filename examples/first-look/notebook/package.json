@@ -1,0 +1,9 @@
+{
+  "name": "design-notebook-first-look-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ./design-notebook-example.mjs dev",
+    "build": "node ./design-notebook-example.mjs build"
+  }
+}

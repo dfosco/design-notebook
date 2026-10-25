@@ -1,0 +1,19 @@
+{
+  "formatVersion": 1,
+  "purpose": "Historical candidate pins preserved from earlier #g008#t03 qualification rounds. These are record history only: no harness assertion reads this file.",
+  "supersededBy": "tests/release/release-candidate-freeze.json",
+  "historical": [
+    {
+      "label": "MIT candidate packed tarball d942b7e586341a1ec0cabd34e07417d02ff0424fcb0abaa200d3cfab92654d28 (Node 20.19 / npm 10.8.2 nonbrowser consumer run; pre-Tiny-Canvas-chrome baseline)",
+      "candidateHashes": {
+        "LICENSE": "26793f4b878a36d3f099267fdc8e1780d7ba24b6e65994a93fd20d61afe56c86",
+        "package.json": "c45d3e0b04e0b8da3bdeba510183a650e93edbe7243a7bb4a662668b65e9d019",
+        "package-lock.json": "adb07ea53015aca2d209753d7cd47eba3d36db55379db87b8a3c8280722dd3e5",
+        "bin/design-notebook.js": "d7af28b1a6b804e6d912ba0e0f549c2dd6848532a95f374884d997f5ac98494e",
+        "index.js": "14257a9bf8a087106b6527f5d59b94845dcc0fd6e6c0df32c783a9a09411c212",
+        "index.d.ts": "213fdb0f506abd4a71462962576d00fca120dc18633cb50beea00ff53efe3199"
+      },
+      "provenance": "Recorded in #g008#t03 history (MIT candidate and shutdown review; MIT nonbrowser qualification). Retained as historical; its rendered evidence predates the Tiny Canvas/Hypercanvas chrome, geometry-save and canonical-route changes."
+    }
+  ]
+}

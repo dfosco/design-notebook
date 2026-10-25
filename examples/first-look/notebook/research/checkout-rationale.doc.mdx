@@ -1,0 +1,26 @@
+---
+formatVersion: 1
+id: checkout-rationale
+title: Borrow flow review notes
+references:
+  - checkout-review
+  - borrow-flow
+  - existing-catalog
+---
+import { Prototype, Site } from 'design-notebook/docs'
+
+# Borrow flow review
+
+The canvas places two URL-addressable states of the same notebook-owned prototype side by side. “Request form” and “Request confirmation” use the same source and stable artifact ID, with separate Statefully flow data and view IDs. A reviewer can compare the proposed action with its next step.
+
+The catalog below is an external Site. This example includes an original illustrative screenshot and a replaceable published address. It does not include or publish the catalog application.
+
+## Inspect a single state in context
+
+The same prototype and view IDs can be embedded in a document when a closer reading helps. These blocks render vertically and use the same artifact resolution as the canvas:
+
+<Prototype artifactId="borrow-flow" viewId="request" />
+
+<Prototype artifactId="borrow-flow" viewId="confirmation" />
+
+<Site artifactId="existing-catalog" viewId="catalog-home" />
